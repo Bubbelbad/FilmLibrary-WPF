@@ -14,7 +14,7 @@
 
         <Menu>
             <MenuItem Header="File" FontSize="16">
-                <MenuItem Header="Exit" />
+                <MenuItem Header="Exit" Click="MenuItem_Click" />
             </MenuItem>
             <MenuItem Header="Edit" FontSize="16" />
         </Menu>

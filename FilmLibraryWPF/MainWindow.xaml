@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FilmLibraryWPF"
         xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
-        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -14,8 +13,14 @@
             <RowDefinition />
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
         <userControls:MenuBar/>
+        <userControls:ClearableTextBox Grid.Row="0" Width="250" Height="30" VerticalAlignment="Bottom"/>
 
         <!-- Footer -->
         <Rectangle Fill="DarkGray" Grid.Row="2" />

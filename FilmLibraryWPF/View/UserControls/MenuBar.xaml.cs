@@ -24,5 +24,10 @@ namespace FilmLibraryWPF.View.UserControls
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }
