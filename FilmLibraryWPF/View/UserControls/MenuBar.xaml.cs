@@ -29,5 +29,21 @@ namespace FilmLibraryWPF.View.UserControls
         {
             System.Environment.Exit(0);
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This is a Film Library App made by @Bubbelbad" +
+                            "\nYou can find the code on github! ");
+        }
     }
 }

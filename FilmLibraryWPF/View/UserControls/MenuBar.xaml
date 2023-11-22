@@ -14,9 +14,17 @@
 
         <Menu>
             <MenuItem Header="File" FontSize="16">
+                <MenuItem Header="Open" />
+                <MenuItem Header="Save" Click="MenuItem_Click_2" />
                 <MenuItem Header="Exit" Click="MenuItem_Click" />
+                <MenuItem Header="File" Click="MenuItem_Click_1" />
+                
+                
             </MenuItem>
             <MenuItem Header="Edit" FontSize="16" />
+            <MenuItem Header="Help" FontSize="16">
+                <MenuItem Header="About" FontSize="16" Click="MenuItem_Click_3" />
+            </MenuItem>
         </Menu>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
