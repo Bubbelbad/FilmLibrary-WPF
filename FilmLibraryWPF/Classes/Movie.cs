@@ -12,6 +12,7 @@ namespace FilmLibraryWPF.Classes
         private string Title { get; set; }
         private string Description { get; set; }
         private string Url { get; set; }
+        private int ReleaseYear { get; set; }
 
         public static int nextId = 1;
 

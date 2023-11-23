@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250">
     <Grid>
-        <TextBox x:Name="txtInput" VerticalAlignment="Center"
+        <TextBox x:Name="txtInput" VerticalAlignment="Center" BorderThickness="2" 
                    FontSize="16" FontWeight="Light" Background="Transparent" 
                  TextChanged="txtInput_TextChanged" />
-        <TextBlock x:Name="tbPlaceHolder" Text="Browse movies..." FontSize="16" FontWeight="Light"
+        <TextBlock x:Name="tbPlaceHolder" Text="Browse movies or series" FontSize="16" FontWeight="Light"
                    Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0" 
                    Panel.ZIndex="-1"/>
         <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X" 

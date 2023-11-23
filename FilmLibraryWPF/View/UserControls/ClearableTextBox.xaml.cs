@@ -40,6 +40,7 @@ namespace FilmLibraryWPF.View.UserControls
             else
             {
                 tbPlaceHolder.Visibility = Visibility.Hidden;
+                txtInput.Foreground = Brushes.White;
             }
         }
     }
