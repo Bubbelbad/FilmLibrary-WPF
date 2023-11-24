@@ -36,7 +36,7 @@
             <TextBlock Width="150" Margin="5"  />
             <Button x:Name="sideMenu" Content="Log In" Width="60" Height="25" Margin="5" Grid.Column="2" 
                     HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="sideMenu_Click"/>
-            <Button x:Name="sideMenu2" Content="Sign Up" Width="60" Height="25" Margin="5" Grid.Column="3" 
+            <Button x:Name="sideMenu2" Content="Sign Up" Width="60" Height="25" Margin="5, 0, 10, 5" Grid.Column="3" 
                     HorizontalAlignment="Right" VerticalAlignment="Bottom" />
             
         </Grid>

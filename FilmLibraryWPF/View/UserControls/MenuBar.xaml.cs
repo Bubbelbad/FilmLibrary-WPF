@@ -59,6 +59,7 @@ namespace FilmLibraryWPF.View.UserControls
         private void sideMenu_Click(object sender, RoutedEventArgs e)
         {
             
+            
         }
     }
 }

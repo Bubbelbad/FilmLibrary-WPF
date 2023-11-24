@@ -21,7 +21,7 @@
 
         <userControls:MenuBar/>
         <userControls:ClearableTextBox Grid.Row="0" Width="250" Height="30" VerticalAlignment="Bottom"/>
-        <userControls:LoginWindow x:Name="logInWindow" Visibility="Hidden" Grid.Row="1" VerticalAlignment="Center" />
+        <userControls:LoginWindow x:Name="logInWindow" Visibility="Collapsed" Grid.Row="1" VerticalAlignment="Center" />
 
         <!-- Footer -->
         <Rectangle Fill="Black" Grid.Row="2" />

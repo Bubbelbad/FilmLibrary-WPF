@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmLibraryWPF.View.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,14 @@ namespace FilmLibraryWPF
 
         public MainWindow()
         {
+            
+            
+        }
 
+        public void logIn()
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Visibility = Visibility.Visible;
         }
 
     }
