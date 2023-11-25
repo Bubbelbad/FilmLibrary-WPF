@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FilmLibraryWPF"
         xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="750" Width="1200">
     <Grid Background="DarkGoldenrod">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -20,8 +20,10 @@
         </Grid.ColumnDefinitions>
 
         <userControls:MenuBar/>
-        <userControls:ClearableTextBox Grid.Row="0" Width="250" Height="30" VerticalAlignment="Bottom"/>
-        <userControls:LoginWindow x:Name="logInWindow" Visibility="Collapsed" Grid.Row="1" VerticalAlignment="Center" />
+        <userControls:ClearableTextBox Grid.Row="0"  Width="250" Height="30" VerticalAlignment="Bottom"/>
+        <userControls:LoginWindow x:Name="logInWindow" Visibility="Visible" Grid.Row="1" VerticalAlignment="Center">
+            
+        </userControls:LoginWindow>
 
         <!-- Footer -->
         <Rectangle Fill="Black" Grid.Row="2" />
