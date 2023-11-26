@@ -25,6 +25,11 @@ namespace FilmLibraryWPF
     {
 
         //Använd Kaggle.com för att få ner dataset med info om filmer. 
+        //Frågor: 
+
+        //Hur gör jag för att ändra text i mina ClearableTextBoxes från andra klasser? (Nu står det Browsing movies överallt..)
+        //Hur ändrar jag så LoginWindow går från Hidden till Visible med klick från MainWindow? 
+        //Ligger mina klasser rätt? Hur ska jag göra för att implementera UserControls på ett smart sätt? 
 
         public MainWindow()
         {
