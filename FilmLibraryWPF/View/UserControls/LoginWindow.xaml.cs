@@ -23,6 +23,13 @@ namespace FilmLibraryWPF.View.UserControls
         public LoginWindow()
         {
             InitializeComponent();
+            tbEmail.ChangeText("Email");
+            tbPassword.ChangeText("Password");
+        }
+
+        public void MakeVisible()
+        {
+            
         }
     }
 }

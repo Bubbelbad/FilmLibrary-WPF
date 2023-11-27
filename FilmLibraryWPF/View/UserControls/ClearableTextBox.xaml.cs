@@ -43,5 +43,11 @@ namespace FilmLibraryWPF.View.UserControls
                 txtInput.Foreground = Brushes.White;
             }
         }
+
+        public void ChangeText(string newText)
+        {
+            tbPlaceHolder.Text = newText;
+            //Here I implement a function that lets other classes change what I want to display.
+        }
     }
 }

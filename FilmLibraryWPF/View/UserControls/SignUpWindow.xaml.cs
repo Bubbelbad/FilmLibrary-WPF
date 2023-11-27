@@ -22,6 +22,7 @@ namespace FilmLibraryWPF.View.UserControls
         public SignUpWindow()
         {
             InitializeComponent();
+
         }
     }
 }

@@ -23,13 +23,14 @@
         <TextBlock Grid.Row="0" Width="250" Height="30" VerticalAlignment="Center" Margin="25, 20, 0, 10" 
                    Text="Welcome to Film Library" FontSize="20" Foreground="White" />
         <TextBlock Grid.Row="1" Width="250" Height="30" VerticalAlignment="Bottom" Margin="5, 10, 10, 0" 
-                   Text="Email" FontSize="16" Foreground="White" />
+                   Text="Full name" FontSize="16" Foreground="White" />
         <TextBlock Grid.Row="3" Width="250" Height="30" VerticalAlignment="Bottom" Margin="5, 10, 10, 0" 
-                   Text="Password:" FontSize="16" Foreground="White" />
+                   Text="Email" FontSize="16" Foreground="White" />
 
         <userControls:ClearableTextBox Grid.Row="2"  Width="250" Height="30" VerticalAlignment="Top" Margin="5, 0, 10, 10"/>
         <userControls:ClearableTextBox Grid.Row="4"  Width="250" Height="30" VerticalAlignment="Top" Margin="5, 0, 10, 10"/>
         <CheckBox Grid.Row="5" VerticalAlignment="Top" Margin="20, 11, 5, 5"/>
+        
         <Label Grid.Row="5" Content="Remember me on this device" Foreground="White" 
                VerticalAlignment="Top" Margin="35, 5, 5, 5"/>
         <Button x:Name="btnLogin" Background="Navy" Foreground="White" Grid.Row="7" Width="175" Height="30" 

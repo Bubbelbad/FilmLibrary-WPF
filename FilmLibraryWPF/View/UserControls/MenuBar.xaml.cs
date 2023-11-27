@@ -20,9 +20,12 @@ namespace FilmLibraryWPF.View.UserControls
     /// </summary>
     public partial class MenuBar : UserControl
     {
+        
+
         public MenuBar()
         {
             InitializeComponent();
+
         }
 
 
@@ -58,7 +61,7 @@ namespace FilmLibraryWPF.View.UserControls
         //Log in
         private void sideMenu_Click(object sender, RoutedEventArgs e)
         {
-            
+            //
             
         }
     }

@@ -36,5 +36,9 @@ namespace FilmLibraryWPF
             InitializeComponent();
         }
 
+        public void MakeLoginVisible()
+        {
+            logInWindow.Visibility = Visibility.Visible;
+        }
     }
 }
