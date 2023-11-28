@@ -30,17 +30,17 @@ namespace FilmLibraryWPF.View.UserControls
 
 
         //
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
         }
+
 
         public void SetMainWindow(MainWindow mainWindow1)
         {
             this.mainWindow = mainWindow1;
         }
         
-
 
         //
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -57,17 +57,22 @@ namespace FilmLibraryWPF.View.UserControls
 
 
         //About
-        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        private void MenuAbout_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("This is a Film Library App made by @Bubbelbad" +
                             "\nYou can find the code on github! ");
         }
 
 
-        //Log in
-        private void sideMenu_Click(object sender, RoutedEventArgs e)
+        private void logInWindow_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.LogInVisible();
+        }
+
+
+        private void signInWindow_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.SignUpVisible(); 
         }
     }
 }

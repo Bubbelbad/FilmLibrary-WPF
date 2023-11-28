@@ -23,12 +23,13 @@
         </Grid.ColumnDefinitions>
 
         <userControls:MenuBar x:Name="menuBar" />
-        <userControls:ClearableTextBox Grid.Row="0"  Width="250" Height="30" VerticalAlignment="Bottom"/>
+        <userControls:ClearableTextBox Grid.Row="0"  Width="250" Height="30" VerticalAlignment="Bottom" />
         <userControls:LoginWindow x:Name="logInWindow" Visibility="Hidden" Grid.Row="1" VerticalAlignment="Center" >
             <userControls:LoginWindow.Effect>
-                <DropShadowEffect BlurRadius="10" Color="#FF020F42" Opacity="0.75" ShadowDepth="10"/>
+                <DropShadowEffect BlurRadius="10" Color="#FF020F42" Opacity="0.75" ShadowDepth="10" />
             </userControls:LoginWindow.Effect>
         </userControls:LoginWindow>
+        
 
 
 

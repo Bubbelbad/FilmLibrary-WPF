@@ -22,7 +22,11 @@ namespace FilmLibraryWPF.View.UserControls
         public SignUpWindow()
         {
             InitializeComponent();
+        }
 
+        public void SignUpGridVisible()
+        {
+            signUpGrid.Visibility = Visibility.Visible;
         }
     }
 }

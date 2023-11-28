@@ -24,12 +24,8 @@ namespace FilmLibraryWPF
     public partial class MainWindow : Window
     {
 
-        //Använd Kaggle.com för att få ner dataset med info om filmer. 
-        //Frågor: 
-
-        //Hur gör jag för att ändra text i mina ClearableTextBoxes från andra klasser? (Nu står det Browsing movies överallt..)
-        //Hur ändrar jag så LoginWindow går från Hidden till Visible med klick från MainWindow? 
-        //Ligger mina klasser rätt? Hur ska jag göra för att implementera UserControls på ett smart sätt? 
+        //Använd Kaggle.com för att få ner dataset med info om filmer för träning? 
+        //Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
 
         public MainWindow()
         {
@@ -37,9 +33,16 @@ namespace FilmLibraryWPF
             menuBar.SetMainWindow(this);
         }
 
+
         public void LogInVisible()
         {
             logInWindow.Visibility = Visibility.Visible;
+        }
+        
+
+        public void SignUpVisible()
+        {
+            //signUpWindow.Visibility = Visibility.Visible;
         }
     }
 }

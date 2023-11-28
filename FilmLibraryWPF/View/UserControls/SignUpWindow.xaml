@@ -7,7 +7,7 @@
         xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
         mc:Ignorable="d"
         Title="SignUpWindow" Height="450" Width="800">
-    <Grid Background="Black" Width="300" >
+    <Grid x:Name="signUpGrid"  Background="Black" Width="300" >
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>

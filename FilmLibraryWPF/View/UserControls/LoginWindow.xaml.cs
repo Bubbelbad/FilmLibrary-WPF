@@ -31,5 +31,18 @@ namespace FilmLibraryWPF.View.UserControls
         {
             logInGrid.Visibility = Visibility.Visible;
         }
+
+        public bool CheckEmail(string email)
+        {
+            if (email != null && email.Contains("@") && email.Length >= 8)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Wrong email");
+                return false;
+            }
+        }
     }
 }

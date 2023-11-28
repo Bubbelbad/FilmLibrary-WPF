@@ -13,17 +13,17 @@
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
-        <Menu>
-            <MenuItem Header="File" FontSize="16">
+        <Menu Background="Black" Foreground="Gray">
+            <MenuItem Header="File" FontSize="16" >
                 <MenuItem Header="Open" />
                 <MenuItem Header="Save" Click="MenuItem_Click_2" />
-                <MenuItem Header="Exit" Click="MenuItem_Click" />
+                <MenuItem Header="Exit" Click="MenuExit_Click" />
                 <MenuItem Header="File" Click="MenuItem_Click_1" />
                 
             </MenuItem>
             <MenuItem Header="Edit" FontSize="16" />
             <MenuItem Header="Help" FontSize="16">
-                <MenuItem Header="About" FontSize="16" Click="MenuItem_Click_3" />
+                <MenuItem Header="About" FontSize="16" Click="MenuAbout_Click" />
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1" HorizontalAlignment="Stretch" Background="Black">
@@ -35,9 +35,9 @@
             </Grid.ColumnDefinitions>
             <TextBlock Width="150" Margin="5"  />
             <Button x:Name="sideMenu" Content="Log In" Width="60" Height="25" Margin="5" Grid.Column="2" 
-                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="sideMenu_Click"/>
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="logInWindow_Click"/>
             <Button x:Name="sideMenu2" Content="Sign Up" Width="60" Height="25" Margin="5, 0, 10, 5" Grid.Column="3" 
-                    HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="signInWindow_Click" />
             
         </Grid>
     </Grid>
