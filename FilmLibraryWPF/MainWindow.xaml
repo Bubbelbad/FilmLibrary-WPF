@@ -7,26 +7,33 @@
         xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="1200">
-    <Grid Background="DarkGoldenrod">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/blueBackground.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="80"/>
             <RowDefinition />
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
-        
+
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <userControls:MenuBar/>
+        <userControls:MenuBar x:Name="menuBar" />
         <userControls:ClearableTextBox Grid.Row="0"  Width="250" Height="30" VerticalAlignment="Bottom"/>
-        <userControls:LoginWindow x:Name="logInWindow" Visibility="Hidden" Grid.Row="1" VerticalAlignment="Center" />
+        <userControls:LoginWindow x:Name="logInWindow" Visibility="Hidden" Grid.Row="1" VerticalAlignment="Center" >
+            <userControls:LoginWindow.Effect>
+                <DropShadowEffect BlurRadius="10" Color="#FF020F42" Opacity="0.75" ShadowDepth="10"/>
+            </userControls:LoginWindow.Effect>
+        </userControls:LoginWindow>
 
 
 
         <!-- Footer -->
         <Rectangle Fill="Black" Grid.Row="2" />
-        
+
     </Grid>
 </Window>

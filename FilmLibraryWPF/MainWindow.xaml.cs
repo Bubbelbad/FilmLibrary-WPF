@@ -34,9 +34,10 @@ namespace FilmLibraryWPF
         public MainWindow()
         {
             InitializeComponent();
+            menuBar.SetMainWindow(this);
         }
 
-        public void MakeLoginVisible()
+        public void LogInVisible()
         {
             logInWindow.Visibility = Visibility.Visible;
         }

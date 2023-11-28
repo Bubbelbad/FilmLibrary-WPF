@@ -27,9 +27,9 @@ namespace FilmLibraryWPF.View.UserControls
             tbPassword.ChangeText("Password");
         }
 
-        public void MakeVisible()
+        public void LogInGridVisible()
         {
-            
+            logInGrid.Visibility = Visibility.Visible;
         }
     }
 }

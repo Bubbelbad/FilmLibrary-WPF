@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:FilmLibraryWPF.View.UserControls"
              xmlns:LogInWindow="clr-namespace:FilmLibraryWPF.View.UserControls"
              mc:Ignorable="d" 
-             Height="70" d:DesignWidth="800">
+             Height="100" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
-            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
         <Menu>

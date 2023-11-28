@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,12 +21,11 @@ namespace FilmLibraryWPF.View.UserControls
     /// </summary>
     public partial class MenuBar : UserControl
     {
-        
+        MainWindow mainWindow;
 
         public MenuBar()
         {
             InitializeComponent();
-
         }
 
 
@@ -34,6 +34,12 @@ namespace FilmLibraryWPF.View.UserControls
         {
             System.Environment.Exit(0);
         }
+
+        public void SetMainWindow(MainWindow mainWindow1)
+        {
+            this.mainWindow = mainWindow1;
+        }
+        
 
 
         //
@@ -61,8 +67,7 @@ namespace FilmLibraryWPF.View.UserControls
         //Log in
         private void sideMenu_Click(object sender, RoutedEventArgs e)
         {
-            //
-            
+            mainWindow.LogInVisible();
         }
     }
 }

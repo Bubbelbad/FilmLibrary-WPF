@@ -7,7 +7,7 @@
              xmlns:local="clr-namespace:FilmLibraryWPF.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400" >
-    <Grid Background="Black" Width="300" >
+    <Grid x:Name="logInGrid" Background="Black" Width="300" Visibility="Visible" >
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
