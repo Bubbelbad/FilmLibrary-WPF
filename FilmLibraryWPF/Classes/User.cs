@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
@@ -23,6 +24,23 @@ namespace FilmLibraryWPF.Classes
             this.Email = email;
             this.Password = password;
             this.Id = nextId++;
+        }
+
+
+        public bool LogIn(string email, string password)
+        {
+            if (email == null || password == null)
+            {
+                return false;
+            }
+            else if (email == this.Email.ToLower() && password == this.Password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

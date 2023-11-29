@@ -1,4 +1,5 @@
-﻿using FilmLibraryWPF.View.UserControls;
+﻿using FilmLibraryWPF.Classes;
+using FilmLibraryWPF.View.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,15 +24,19 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-
         //Använd Kaggle.com för att få ner dataset med info om filmer för träning? 
         //Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
-
+        UserManager userManager;
         public MainWindow()
         {
             InitializeComponent();
+            userManager = new UserManager();
             menuBar.SetMainWindow(this);
+            this.logInWindow.SetMenuBar(menuBar);
+            this.signUpWindow.SetUserManagers(userManager, menuBar);
+            this.logInWindow.SetUserManager(userManager);
         }
+
 
 
         public void LogInVisible()
@@ -43,11 +48,6 @@ namespace FilmLibraryWPF
         public void SignUpVisible()
         {
             signUpWindow.SignUpGridVisible();
-        }
-
-        public void BlurBackGround()
-        {
-            
         }
     }
 }

@@ -9,7 +9,7 @@
         Title="mainWindow" Height="750" Width="1200">
     <Grid>
         <Grid.Background >
-            <ImageBrush ImageSource="/blueBackground.jpg"/>
+            <ImageBrush ImageSource="/blueBackground.jpg" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -22,24 +22,24 @@
         
         <!-- Menu bar -->
         <userControls:MenuBar x:Name="menuBar" />
-        <userControls:ClearableTextBox Grid.Row="0"  Width="250" Height="30" VerticalAlignment="Bottom" />
+        
         
         <!-- Log In -->
-        <userControls:LoginWindow x:Name="logInWindow" Visibility="Visible" Grid.Row="1" VerticalAlignment="Center" >
+        <userControls:LoginWindow x:Name="logInWindow" Grid.Row="1" VerticalAlignment="Center" >
             <userControls:LoginWindow.Effect>
                 <DropShadowEffect BlurRadius="10" Color="#FF020F42" Opacity="0.75" ShadowDepth="10" />
             </userControls:LoginWindow.Effect>
         </userControls:LoginWindow>
         
         <!-- Sign Up -->
-        <userControls:SignUp x:Name="signUpWindow" Visibility="Visible" Grid.Row="1" VerticalAlignment="Center">
+        <userControls:SignUp x:Name="signUpWindow" Grid.Row="1" VerticalAlignment="Center">
             <userControls:SignUp.Effect>
                 <DropShadowEffect BlurRadius="10" Color="#FF020F42" Opacity="0.75" ShadowDepth="10"/>
             </userControls:SignUp.Effect>
         </userControls:SignUp>
         
         <!-- User Menu -->
-        <userControls:UserMenu x:Name="userMenu" Visibility="Visible" Grid.Row="1" VerticalAlignment="Top"  />
+        <userControls:UserMenu x:Name="userMenu" Visibility="Hidden" Grid.Row="1" VerticalAlignment="Top"  />
 
         <!-- Footer -->
         <Rectangle Fill="Black" Grid.Row="2" />

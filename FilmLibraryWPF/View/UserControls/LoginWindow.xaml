@@ -9,7 +9,7 @@
              d:DesignHeight="600" d:DesignWidth="400" >
     
     
-    <Grid x:Name="logInGrid" Background="Black" Width="300" Visibility="Visible" >
+    <Grid x:Name="logInGrid" Background="Black" Width="300" Visibility="Hidden" >
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
@@ -36,6 +36,6 @@
         <Label Grid.Row="5" Content="Remember me on this device" Foreground="White" 
                VerticalAlignment="Top" Margin="35, 5, 5, 5"/>
         <Button x:Name="btnLogin" Background="Navy" Foreground="White" Grid.Row="7" Width="175" Height="30" 
-                Content="LOG IN!" FontSize="11" Margin="5, 10, 10, 20"/>
+                Content="LOG IN!" FontSize="11" Margin="5, 10, 10, 20" Click="btnLogin_Click" />
     </Grid>
 </UserControl>

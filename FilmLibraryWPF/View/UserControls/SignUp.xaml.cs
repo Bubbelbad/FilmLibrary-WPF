@@ -22,6 +22,7 @@ namespace FilmLibraryWPF.View.UserControls
     public partial class SignUp : UserControl
     {
         UserManager userManager;
+        MenuBar menuBar;
 
         public SignUp()
         {
@@ -32,10 +33,13 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-        public void SetUserManager(UserManager userManager1)
+        public void SetUserManagers(UserManager userManager1, MenuBar menubar)
         {
             this.userManager = userManager1;
+            this.menuBar = menubar;
         }
+
+
 
 
         public void SignUpGridVisible()
@@ -43,23 +47,23 @@ namespace FilmLibraryWPF.View.UserControls
             if (signUpGrid.Visibility == Visibility.Hidden)
             {
                 signUpGrid.Visibility = Visibility.Visible;
+                menuBar.blurEffect.Radius = 5;
             }
             else if (signUpGrid.Visibility == Visibility.Visible)
             {
                 signUpGrid.Visibility = Visibility.Hidden;
+                menuBar.blurEffect.Radius = 0;
             }
         }
 
 
         private void btnSignUpDone_Click(object sender, RoutedEventArgs e)
         {
-            string fullName = tbFullName.ToString();
-            string user = tbEmail.ToString();
+            string fullName = tbFullName.txtInput.ToString();
+            string user = tbEmail.txtInput.ToString();
             string password = tbPassword.ToString();
             userManager.CreateUser(fullName, user, password);
             SignUpGridVisible();
         }
-
-
     }
 }

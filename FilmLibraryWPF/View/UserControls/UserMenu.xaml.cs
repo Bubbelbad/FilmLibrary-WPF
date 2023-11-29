@@ -24,5 +24,17 @@ namespace FilmLibraryWPF.View.UserControls
         {
             InitializeComponent();
         }
+
+        public void userMenuGridVisible()
+        {
+            if (userMenuGrid.Visibility == Visibility.Hidden)
+            {
+                userMenuGrid.Visibility = Visibility.Visible;
+            }
+            else if (userMenuGrid.Visibility == Visibility.Visible)
+            {
+                userMenuGrid.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }
