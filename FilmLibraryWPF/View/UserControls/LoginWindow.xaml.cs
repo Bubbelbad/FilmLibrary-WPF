@@ -25,6 +25,7 @@ namespace FilmLibraryWPF.View.UserControls
     {
         MenuBar menuBar;
         UserManager userManager;
+        MainWindow mainWindow;
 
 
         public LoginWindow()
@@ -44,6 +45,11 @@ namespace FilmLibraryWPF.View.UserControls
         public void SetUserManager(UserManager userManager)
         {
             this.userManager = userManager;
+        }
+
+        public void SetMainWindow(MainWindow mainWindow)
+        {
+            this.mainWindow = mainWindow;
         }
 
 
@@ -78,19 +84,20 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string user = tbEmail.txtInput.ToString();
-            string password = tbPassword.txtInput.ToString();
+            string user = tbEmail.txtInput.Text;
+            string password = tbPassword.txtInput.Text;
             try
             {
                 if (userManager.LogInUser(user, password))
                 {
                     MessageBox.Show("CORRECT!");
+                    LogInGridVisible();
+                    mainWindow.userMenu.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    tbEmail.txtInput.Clear();
                     tbPassword.txtInput.Clear();
-                    MessageBox.Show("Wrong credentials!");
+                    tbEmail.txtInput.Clear();
                 }
             }
             catch

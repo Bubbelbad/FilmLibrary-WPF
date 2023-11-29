@@ -27,6 +27,12 @@ namespace FilmLibraryWPF.Classes
         }
 
 
+        public string GetName()
+        {
+            return this.Email;
+        }
+
+
         public bool LogIn(string email, string password)
         {
             if (email == null || password == null)

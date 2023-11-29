@@ -14,28 +14,31 @@ namespace FilmLibraryWPF.Classes
 
         public UserManager()
         {
-
+            listOfUsers.Add(new User("victor ivarson", "vullmail", "1234"));
         }
 
 
-        public void CreateUser(string fullName, string email, string password)
+        public bool CreateUser(string fullName, string email, string password)
         {
             listOfUsers.Add(new User(fullName, email, password));
+            return true;
         }
 
 
         internal bool LogInUser(string username, string password)
         {
+            User theOne;
             foreach(User user in listOfUsers)
             {
-                if (user.LogIn(username, password))
+                if (user.GetName() == username)
                 {
+                    user.LogIn(username, password);
                     currentUser = user;
                     return true;
                 }
                 else
                 {
-                    return false;
+                    continue;
                 }
             }
             return false;

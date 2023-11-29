@@ -40,8 +40,6 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-
-
         public void SignUpGridVisible()
         {
             if (signUpGrid.Visibility == Visibility.Hidden)
@@ -59,11 +57,18 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btnSignUpDone_Click(object sender, RoutedEventArgs e)
         {
-            string fullName = tbFullName.txtInput.ToString();
-            string user = tbEmail.txtInput.ToString();
-            string password = tbPassword.ToString();
-            userManager.CreateUser(fullName, user, password);
-            SignUpGridVisible();
+            string fullName = tbFullName.txtInput.Text;
+            string user = tbEmail.txtInput.Text;
+            string password = tbPassword.txtInput.Text;
+            if (userManager.CreateUser(fullName, user, password))
+            {
+                SignUpGridVisible();
+                MessageBox.Show("Success!");
+            }
+            else
+            {
+                MessageBox.Show("Näe");
+            }
         }
     }
 }

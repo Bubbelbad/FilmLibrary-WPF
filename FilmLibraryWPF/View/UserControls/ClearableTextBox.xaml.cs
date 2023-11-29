@@ -25,11 +25,13 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
+
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             txtInput.Clear(); 
             txtInput.Focus();
         }
+
 
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {

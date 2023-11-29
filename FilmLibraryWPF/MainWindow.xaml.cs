@@ -35,8 +35,8 @@ namespace FilmLibraryWPF
             this.logInWindow.SetMenuBar(menuBar);
             this.signUpWindow.SetUserManagers(userManager, menuBar);
             this.logInWindow.SetUserManager(userManager);
+            this.logInWindow.SetMainWindow(this);
         }
-
 
 
         public void LogInVisible()
