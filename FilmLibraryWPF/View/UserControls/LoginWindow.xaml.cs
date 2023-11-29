@@ -27,10 +27,19 @@ namespace FilmLibraryWPF.View.UserControls
             tbPassword.ChangeText("Password");
         }
 
+
         public void LogInGridVisible()
         {
-            logInGrid.Visibility = Visibility.Visible;
+            if (logInGrid.Visibility == Visibility.Visible)
+            {
+                logInGrid.Visibility = Visibility.Hidden;
+            }
+            else if (logInGrid.Visibility == Visibility.Hidden)
+            {
+                logInGrid.Visibility = Visibility.Visible;
+            }
         }
+
 
         public bool CheckEmail(string email)
         {

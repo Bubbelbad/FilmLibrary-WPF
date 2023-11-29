@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FilmLibraryWPF.View.UserControls
 {
     /// <summary>
-    /// Interaction logic for SignUpWindow.xaml
+    /// Interaction logic for UserMenu.xaml
     /// </summary>
-    public partial class SignUpWindow : Window
+    public partial class UserMenu : UserControl
     {
-        public SignUpWindow()
+        public UserMenu()
         {
             InitializeComponent();
-        }
-
-        public void SignUpGridVisible()
-        {
-            signUpGrid.Visibility = Visibility.Visible;
         }
     }
 }

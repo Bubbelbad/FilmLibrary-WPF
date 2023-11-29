@@ -36,13 +36,18 @@ namespace FilmLibraryWPF
 
         public void LogInVisible()
         {
-            logInWindow.Visibility = Visibility.Visible;
+            logInWindow.LogInGridVisible();
         }
         
 
         public void SignUpVisible()
         {
-            //signUpWindow.Visibility = Visibility.Visible;
+            signUpWindow.SignUpGridVisible();
+        }
+
+        public void BlurBackGround()
+        {
+            
         }
     }
 }
