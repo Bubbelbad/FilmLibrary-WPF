@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 
@@ -10,11 +11,13 @@ namespace FilmLibraryWPF.Classes
 {
     public class User
     {
+        List<Movie> watchLater = new List<Movie>();
+        List<Movie> favourites = new List<Movie>();
 
         public int Id { get; set; }
-        private string FullName { get; set; }
-        private string Email { get; set; }
-        private string Password { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
 
         public static int nextId = 1;
 
@@ -47,6 +50,19 @@ namespace FilmLibraryWPF.Classes
             {
                 return false;
             }
+        }
+
+
+        public void AddMovie(string list)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public string GetJson()
+        {
+            string jsonUser = JsonSerializer.Serialize(this);
+            return jsonUser;
         }
     }
 }

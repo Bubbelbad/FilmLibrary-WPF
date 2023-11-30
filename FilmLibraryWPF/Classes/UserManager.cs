@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ namespace FilmLibraryWPF.Classes
     public class UserManager
     {
         List<User> listOfUsers = new List<User>();
+        public static string usersPath = "users.txt";
+
         User currentUser;
 
         public UserManager()
@@ -21,6 +24,10 @@ namespace FilmLibraryWPF.Classes
         public bool CreateUser(string fullName, string email, string password)
         {
             listOfUsers.Add(new User(fullName, email, password));
+            StreamWriter sw = new StreamWriter(usersPath, true);
+            int index = listOfUsers.Count - 1;
+            sw.WriteLine(listOfUsers[index].GetJson());
+            sw.Close();
             return true;
         }
 
@@ -43,5 +50,29 @@ namespace FilmLibraryWPF.Classes
             }
             return false;
         }
+
+
+      //  public void LoadUsersFromFile()
+      //  {
+      //      listOfUsers.Clear();
+      //      using (StreamReader sr = new StreamReader(usersPath))
+      //      {
+      //          string line = sr.ReadLine();
+      //          try
+      //          {
+      //              while (line != null)
+      //              {
+      //
+      //
+      //                  User user = 
+      //                  line = sr.ReadLine();
+      //              }
+      //          }
+      //          catch (Exception e)
+      //          {
+      //              Console.WriteLine(e.Message);
+      //          }
+      //      }
+      //  }
     }
 }
