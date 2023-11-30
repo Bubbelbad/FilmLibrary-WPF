@@ -41,10 +41,10 @@
                     HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="logInWindow_Click"/>
             <Button x:Name="sideMenu2" Content="Sign Up" Width="60" Height="25" Margin="5, 0, 10, 5" Grid.Column="3" 
                     HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="signInWindow_Click" />
-            <Button x:Name="btn_userMenu" Content="Username" Width="60" Height="25" Margin="40, 0, 10, 5" Grid.Column="1" Background="Black" BorderBrush="Aquamarine" 
-                    Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="signInWindow_Click" />
+            <Button x:Name="btn_userMenu" Content="Username" Width="100" Height="30" Margin="50, 5, 0, 5" Grid.Column="1" Background="Black" BorderBrush="Transparent"
+                    Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Center" Click="signInWindow_Click" FontSize="20"/>
 
-            <Image x:Name="userIcon" Grid.Column="1" Source="/View/UserControls/userIcon.png" HorizontalAlignment="Left" Width="30" Margin="5, 15, 0, 0" />
+            <Image x:Name="userIcon" Grid.Column="1" Source="/View/UserControls/userIcon.png" HorizontalAlignment="Left" Width="50" Margin="0, 1, 0, 0" Height="50" />
             <userControls:ClearableTextBox Grid.Column="1"  Width="250" Height="30" VerticalAlignment="Bottom" />
 
             
