@@ -13,7 +13,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
-            <RowDefinition />
+            <RowDefinition Height="*" />
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
         </userControls:SignUp>
         
         <!-- User Menu -->
-        <userControls:UserMenu x:Name="userMenu" Visibility="Hidden" Grid.Row="1" VerticalAlignment="Top"  />
+        <userControls:UserMenu x:Name="userMenu" Grid.Row="1" VerticalAlignment="Top"  />
 
         <!-- Footer -->
         <Rectangle Fill="Black" Grid.Row="2" />

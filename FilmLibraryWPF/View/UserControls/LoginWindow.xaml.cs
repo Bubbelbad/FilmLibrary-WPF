@@ -36,19 +36,10 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-        public void SetMenuBar(MenuBar menubar)
+        public void SetUserControls(MenuBar menuBar, UserManager userManager, MainWindow mainWindow)
         {
-            this.menuBar = menubar;
-        }
-
-
-        public void SetUserManager(UserManager userManager)
-        {
+            this.menuBar = menuBar;
             this.userManager = userManager;
-        }
-
-        public void SetMainWindow(MainWindow mainWindow)
-        {
             this.mainWindow = mainWindow;
         }
 
@@ -92,7 +83,6 @@ namespace FilmLibraryWPF.View.UserControls
                 {
                     MessageBox.Show("CORRECT!");
                     LogInGridVisible();
-                    mainWindow.userMenu.Visibility = Visibility.Visible;
                 }
                 else
                 {

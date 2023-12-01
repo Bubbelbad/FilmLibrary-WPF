@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmLibraryWPF.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,25 @@ namespace FilmLibraryWPF.View.UserControls
     /// </summary>
     public partial class UserMenu : UserControl
     {
+        MenuBar menuBar;
+        UserManager userManager;
+        MainWindow mainWindow;
+
+        public void SetUserControls(MenuBar menuBar, UserManager userManager,MainWindow mainWindow)
+        {
+            this.menuBar = menuBar;
+            this.userManager = userManager;
+            this.mainWindow = mainWindow;
+        }
+
+
         public UserMenu()
         {
             InitializeComponent();
         }
 
 
-        public void userMenuGridVisible()
+        public void UserMenuGridVisible()
         {
             if (userMenuGrid.Visibility == Visibility.Hidden)
             {

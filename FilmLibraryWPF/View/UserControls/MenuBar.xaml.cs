@@ -75,5 +75,10 @@ namespace FilmLibraryWPF.View.UserControls
         {
             mainWindow.SignUpVisible(); 
         }
+
+        private void btn_userMenu_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.UserMenuGridVisible();
+        }
     }
 }

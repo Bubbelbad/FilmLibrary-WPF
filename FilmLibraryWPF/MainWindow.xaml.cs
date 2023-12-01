@@ -32,10 +32,9 @@ namespace FilmLibraryWPF
             InitializeComponent();
             userManager = new UserManager();
             menuBar.SetMainWindow(this);
-            this.logInWindow.SetMenuBar(menuBar);
+            this.logInWindow.SetUserControls(menuBar, userManager, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar);
-            this.logInWindow.SetUserManager(userManager);
-            this.logInWindow.SetMainWindow(this);
+            this.userMenu.SetUserControls(menuBar, userManager, this);
         }
 
 
@@ -48,6 +47,11 @@ namespace FilmLibraryWPF
         public void SignUpVisible()
         {
             signUpWindow.SignUpGridVisible();
+        }
+
+        public void UserMenuGridVisible()
+        {
+            userMenu.UserMenuGridVisible();
         }
     }
 }
