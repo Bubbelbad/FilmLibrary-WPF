@@ -42,7 +42,7 @@ namespace FilmLibraryWPF
         {
             logInWindow.LogInGridVisible();
         }
-        
+
 
         public void SignUpVisible()
         {

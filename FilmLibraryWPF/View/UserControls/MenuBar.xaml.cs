@@ -29,28 +29,27 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
+        public void SetMainWindow(MainWindow mainWindow1)
+        {
+            this.mainWindow = mainWindow1;
+        }
 
-        //
+
+        //Exit
         private void MenuExit_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
         }
 
 
-        public void SetMainWindow(MainWindow mainWindow1)
-        {
-            this.mainWindow = mainWindow1;
-        }
-        
-
-        //
+        //File
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
 
         }
 
 
-        //
+        //Save
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
 

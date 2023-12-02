@@ -38,7 +38,7 @@
         <Label Grid.Row="7" Content="Remember me on this device" Foreground="White" 
            VerticalAlignment="Top" Margin="35, 5, 5, 5"/>
         <Button x:Name="btnSignUpDone" Background="Navy" Foreground="White" Grid.Row="9" Width="175" Height="30" 
-            Content="SIGN UP!" FontSize="11" Margin="5, 10, 10, 20" Click="btnSignUpDone_Click"/>
+            Content="SIGN UP" FontSize="16" Margin="5, 10, 10, 20" Click="btnSignUpDone_Click"/>
 
     </Grid>
 </UserControl>
