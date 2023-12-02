@@ -10,13 +10,15 @@ Now I don't know how to use API just yet, but I thought I'd lay the foundation o
 It might be that I change my goals when I know more, but this is the initial idea.
 
 ## Features so far
-- Being able to see the login window and sign up window
+- Log In window and Sing up window that works on a basic level
+- Blur effect on menu to focus login and sign up screen
+- Menu for logged in user with suiting icons
 
 ## Features that are yet to be
 
 - Saving the movie-objects in different lists (watch later, favourites etc.)
 - Getting data from API's
-- Signing Up for an account to use more features
+- Scrollable feed for displaying movies in different categorys
 
 
 ## Screenshots
