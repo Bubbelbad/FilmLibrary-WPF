@@ -24,7 +24,7 @@
         
         
         <TextBlock Grid.Row="0" Width="250" Height="30" VerticalAlignment="Center" Margin="25, 20, 0, 10" 
-               Text="Welcome to Film Library" FontSize="20" Foreground="White" />
+               Text="Welcome to Movie Library" FontSize="20" Foreground="White" />
         <TextBlock Grid.Row="1" Width="250" Height="30" VerticalAlignment="Bottom" Margin="5, 10, 10, 0" 
                Text="Full name" FontSize="16" Foreground="White" />
         <TextBlock Grid.Row="3" Width="250" Height="30" VerticalAlignment="Bottom" Margin="5, 10, 10, 0" Text="Email" FontSize="16" Foreground="White" />

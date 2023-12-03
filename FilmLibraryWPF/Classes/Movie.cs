@@ -9,7 +9,7 @@ namespace FilmLibraryWPF.Classes
     class Movie
     {
         public int Id { get; set; }
-        private string Title { get; set; }
+        public string Title { get; private set; }
         private string Description { get; set; }
         private string Url { get; set; }
         private int ReleaseYear { get; set; }
@@ -20,7 +20,9 @@ namespace FilmLibraryWPF.Classes
         {
             this.Title = title;
             this.Description = description;
+            this.Url = url;
             this.Id = nextId++;
         }
+
     }
 }

@@ -9,11 +9,13 @@
 
   <ItemGroup>
     <None Remove="blueBackground.jpg" />
+    <None Remove="View\UserControls\blueBackground.jpg" />
     <None Remove="View\UserControls\userIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="blueBackground.jpg" />
+    <Resource Include="View\UserControls\blueBackground.jpg" />
     <Resource Include="View\UserControls\userIcon.png" />
   </ItemGroup>
 
