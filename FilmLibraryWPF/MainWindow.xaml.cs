@@ -27,6 +27,8 @@ namespace FilmLibraryWPF
         //Använd Kaggle.com för att få ner dataset med info om filmer för träning? 
         //Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
         UserManager userManager;
+        User currentUser;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +37,13 @@ namespace FilmLibraryWPF
             this.logInWindow.SetUserControls(menuBar, userManager, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar);
             this.userMenu.SetUserControls(menuBar, userManager, this);
+        }
+
+
+        public string CurrentUser()
+        {
+            currentUser = userManager.CurrentUser();
+            return currentUser.FullName;
         }
 
 

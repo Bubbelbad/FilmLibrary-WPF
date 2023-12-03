@@ -83,6 +83,8 @@ namespace FilmLibraryWPF.View.UserControls
                 {
                     MessageBox.Show("CORRECT!");
                     LogInGridVisible();
+                    mainWindow.CurrentUser();
+                    menuBar.UpdateUserName();
                 }
                 else
                 {

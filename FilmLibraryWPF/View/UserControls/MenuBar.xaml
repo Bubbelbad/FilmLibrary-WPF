@@ -20,9 +20,9 @@
         <Menu Background="Black" Foreground="Gray">
             <MenuItem Header="File" FontSize="16" >
                 <MenuItem Header="Open" />
-                <MenuItem Header="Save" Click="MenuItem_Click_2" />
+                <MenuItem Header="Save" Click="MenuSave_Click" />
                 <MenuItem Header="Exit" Click="MenuExit_Click" />
-                <MenuItem Header="File" Click="MenuItem_Click_1" />
+                <MenuItem Header="File" Click="MenuFile_Click" />
                 
             </MenuItem>
             <MenuItem Header="Edit" FontSize="16" />

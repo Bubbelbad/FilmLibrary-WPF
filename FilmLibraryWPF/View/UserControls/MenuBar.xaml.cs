@@ -29,6 +29,12 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
+        public void UpdateUserName()
+        {
+            btn_userMenu.Content = mainWindow.CurrentUser();
+        }
+
+
         public void SetMainWindow(MainWindow mainWindow1)
         {
             this.mainWindow = mainWindow1;
@@ -43,14 +49,14 @@ namespace FilmLibraryWPF.View.UserControls
 
 
         //File
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void MenuFile_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
 
         //Save
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void MenuSave_Click(object sender, RoutedEventArgs e)
         {
 
         }
