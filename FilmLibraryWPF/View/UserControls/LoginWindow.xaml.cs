@@ -59,20 +59,6 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-        public bool CheckEmail(string email)
-        {
-            if (email != null && email.Contains("@") && email.Length >= 8)
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Wrong email");
-                return false;
-            }
-        }
-
-
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string user = tbEmail.txtInput.Text;
@@ -81,7 +67,6 @@ namespace FilmLibraryWPF.View.UserControls
             {
                 if (userManager.LogInUser(user, password))
                 {
-                    MessageBox.Show("CORRECT!");
                     LogInGridVisible();
                     mainWindow.CurrentUser();
                     menuBar.UpdateUserName();
@@ -90,13 +75,14 @@ namespace FilmLibraryWPF.View.UserControls
                 {
                     tbPassword.txtInput.Clear();
                     tbEmail.txtInput.Clear();
+                    MessageBox.Show("Wrong credentials!");
                 }
             }
             catch
             {
                 tbEmail.ChangeText("Email");
                 tbPassword.ChangeText("Password");
-                MessageBox.Show("Wrong credentials!");
+                MessageBox.Show("Something went wrong!");
             }
         }
     }

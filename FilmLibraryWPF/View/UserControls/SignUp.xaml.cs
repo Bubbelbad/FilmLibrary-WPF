@@ -32,7 +32,6 @@ namespace FilmLibraryWPF.View.UserControls
             tbPassword.ChangeText("Password");
         }
 
-
         public void SetUserManagers(UserManager userManager1, MenuBar menubar)
         {
             this.userManager = userManager1;
@@ -58,16 +57,31 @@ namespace FilmLibraryWPF.View.UserControls
         private void btnSignUpDone_Click(object sender, RoutedEventArgs e)
         {
             string fullName = tbFullName.txtInput.Text;
-            string user = tbEmail.txtInput.Text;
+            string email = tbEmail.txtInput.Text;
             string password = tbPassword.txtInput.Text;
-            if (userManager.CreateUser(fullName, user, password))
+
+            if (CheckEmail(email))
             {
+                userManager.CreateUser(fullName, email, password);
                 SignUpGridVisible();
+                userManager.SaveListOfUsersToJson();
                 MessageBox.Show("Success!");
+            }
+        }
+
+
+        public bool CheckEmail(string email)
+        {
+            if (email != null && email.Contains("@") && email.Length >= 8)
+            {
+
+                return true;
             }
             else
             {
-                MessageBox.Show("Näe");
+                MessageBox.Show("Invalid email! Try again");
+                tbEmail.txtInput.Clear();
+                return false;
             }
         }
     }

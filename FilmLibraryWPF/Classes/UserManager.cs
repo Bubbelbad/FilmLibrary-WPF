@@ -20,7 +20,7 @@ namespace FilmLibraryWPF.Classes
 
         public UserManager()
         {
-            
+            LoadListOfUsersFromFile();
         }
 
 
@@ -33,15 +33,11 @@ namespace FilmLibraryWPF.Classes
         public bool CreateUser(string fullName, string email, string password)
         {
             listOfUsers.Add(new User(fullName, email, password));
-            StreamWriter sw = new StreamWriter(usersPath, true);
-            int index = listOfUsers.Count - 1;
-            sw.WriteLine(listOfUsers[index].GetJson());
-            sw.Close();
             return true;
         }
 
 
-        internal bool LogInUser(string username, string password)
+        public bool LogInUser(string username, string password)
         {
             User theOne;
             foreach(User user in listOfUsers)
@@ -68,6 +64,7 @@ namespace FilmLibraryWPF.Classes
             sw.WriteLine(json);
             sw.Close();
         }
+
 
         public void LoadListOfUsersFromFile()
         {
