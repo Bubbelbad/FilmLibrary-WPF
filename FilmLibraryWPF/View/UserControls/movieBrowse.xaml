@@ -13,8 +13,6 @@
             <RowDefinition Height="250" />
             <RowDefinition Height="250" />
             <RowDefinition Height="250" />
-
         </Grid.RowDefinitions>
-            
     </Grid>
 </UserControl>

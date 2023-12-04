@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
+using Newtonsoft.Json;
 
 namespace FilmLibraryWPF.Classes
 {
@@ -18,7 +20,13 @@ namespace FilmLibraryWPF.Classes
 
         public UserManager()
         {
-            listOfUsers.Add(new User("victor ivarson", "vullmail", "1234"));
+            
+        }
+
+
+        public User CurrentUser()
+        {
+            return currentUser;
         }
 
 
@@ -52,33 +60,36 @@ namespace FilmLibraryWPF.Classes
             return false;
         }
 
-        public User CurrentUser()
+
+        public void SaveListOfUsersToJson()
         {
-            return currentUser;
+            string json = JsonConvert.SerializeObject(listOfUsers, Formatting.Indented);
+            StreamWriter sw = new StreamWriter(usersPath);
+            sw.WriteLine(json);
+            sw.Close();
         }
 
-
-      //  public void LoadUsersFromFile()
-      //  {
-      //      listOfUsers.Clear();
-      //      using (StreamReader sr = new StreamReader(usersPath))
-      //      {
-      //          string line = sr.ReadLine();
-      //          try
-      //          {
-      //              while (line != null)
-      //              {
-      //
-      //
-      //                  User user = 
-      //                  line = sr.ReadLine();
-      //              }
-      //          }
-      //          catch (Exception e)
-      //          {
-      //              Console.WriteLine(e.Message);
-      //          }
-      //      }
-      //  }
+        public void LoadListOfUsersFromFile()
+        {
+            if (!File.Exists(usersPath))
+            {
+                MessageBox.Show("Nothing here");
+            }
+            else
+            {
+                try
+                {
+                    using (StreamReader sr = new StreamReader(usersPath))
+                    {
+                        string json = sr.ReadToEnd();
+                        listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Didnt work");
+                }
+            }
+        }
     }
 }
