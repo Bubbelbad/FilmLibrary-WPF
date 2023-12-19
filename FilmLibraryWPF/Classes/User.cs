@@ -57,12 +57,5 @@ namespace FilmLibraryWPF.Classes
         {
             throw new NotImplementedException();
         }
-
-
-        public string GetJson()
-        {
-            string jsonUser = JsonSerializer.Serialize(this);
-            return jsonUser;
-        }
     }
 }

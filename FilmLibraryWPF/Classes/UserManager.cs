@@ -70,7 +70,8 @@ namespace FilmLibraryWPF.Classes
         {
             if (!File.Exists(usersPath))
             {
-                MessageBox.Show("Nothing here");
+                listOfUsers.Add(new User("admin", "admin", "admin"));
+
             }
             else
             {
