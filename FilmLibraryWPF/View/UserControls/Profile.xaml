@@ -9,7 +9,7 @@
     d:DesignWidth="600"
     mc:Ignorable="d">
 
-    <Border Background="#FF25211E" CornerRadius="8,8,8,8">
+    <Border Background="#FF25211E" CornerRadius="8,8,8,8" Margin="10,10,10,10">
         <Grid Margin="10,10,10,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.3*" />

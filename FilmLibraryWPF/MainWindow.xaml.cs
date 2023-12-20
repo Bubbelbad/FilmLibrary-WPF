@@ -28,6 +28,8 @@ namespace FilmLibraryWPF
         //Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
         UserManager userManager;
         User currentUser;
+        List<UserControl> userControls = new List<UserControl>();
+        
 
         public MainWindow()
         {
@@ -37,6 +39,10 @@ namespace FilmLibraryWPF
             this.logInWindow.SetUserControls(menuBar, userManager, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar);
             this.userMenu.SetUserControls(menuBar, userManager, this);
+            userControls.Add(signUpWindow);
+            userControls.Add(userMenu);
+            userControls.Add(profile);
+            userControls.Add(userMenu);
         }
 
 
@@ -58,9 +64,18 @@ namespace FilmLibraryWPF
             signUpWindow.SignUpGridVisible();
         }
 
-        public void UserMenuGridVisible()
+
+        //Takes the userControl that should be visible as argument and hides the rest of the userControls
+        public void MenuChoiceVisibility(UserControl control)
         {
-            userMenu.UserMenuGridVisible();
+            control.Visibility = Visibility.Visible;
+            foreach (UserControl item in userControls)
+            {
+                if (item != control)
+                {
+                    item.Visibility = Visibility.Hidden;
+                }
+            }
         }
     }
 }

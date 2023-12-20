@@ -84,7 +84,14 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btn_userMenu_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.UserMenuGridVisible();
+            if (mainWindow.userMenu.Visibility == Visibility.Visible)
+            {
+                mainWindow.userMenu.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                mainWindow.userMenu.Visibility = Visibility.Visible;
+            }
         }
     }
 }
