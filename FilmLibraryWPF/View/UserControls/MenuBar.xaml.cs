@@ -70,15 +70,15 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-        private void logInWindow_Click(object sender, RoutedEventArgs e)
-        {
-            mainWindow.LogInVisible();
-        }
+       private void logInWindow_Click(object sender, RoutedEventArgs e)
+       {
+           mainWindow.LogInOrSignUpVisible(mainWindow.logInWindow);
+       }
 
 
         private void signInWindow_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.SignUpVisible(); 
+            mainWindow.LogInOrSignUpVisible(mainWindow.signUpWindow); 
         }
 
 

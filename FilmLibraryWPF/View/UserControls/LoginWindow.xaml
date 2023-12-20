@@ -9,7 +9,7 @@
              d:DesignHeight="600" d:DesignWidth="400" >
     
     
-    <Grid x:Name="logInGrid" Background="Black" Width="300" Visibility="Hidden" >
+    <Grid x:Name="logInGrid" Background="Black" Width="300" >
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>

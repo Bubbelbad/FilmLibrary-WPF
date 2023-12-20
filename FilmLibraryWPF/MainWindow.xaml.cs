@@ -53,15 +53,28 @@ namespace FilmLibraryWPF
         }
 
 
-        public void LogInVisible()
+        public void LogInOrSignUpVisible(UserControl control)
         {
-            logInWindow.LogInGridVisible();
-        }
-
-
-        public void SignUpVisible()
-        {
-            signUpWindow.SignUpGridVisible();
+            if (control.Visibility == Visibility.Hidden)
+            {
+                control.Visibility = Visibility.Visible;
+                menuBar.blurEffect.Radius = 5;
+                userMenu.blurEffect.Radius = 5;
+                if (control == signUpWindow)
+                {
+                    logInWindow.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    signUpWindow.Visibility = Visibility.Hidden;
+                }
+            }
+            else
+            {
+                control.Visibility = Visibility.Hidden;
+                menuBar.blurEffect.Radius = 0;
+                userMenu.blurEffect.Radius = 0;
+            }
         }
 
 
