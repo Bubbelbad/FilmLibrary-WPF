@@ -23,6 +23,7 @@ namespace FilmLibraryWPF.View.UserControls
     {
         UserManager userManager;
         MenuBar menuBar;
+        MainWindow mainWindow;
 
         public SignUp()
         {
@@ -32,25 +33,11 @@ namespace FilmLibraryWPF.View.UserControls
             tbPassword.ChangeText("Password");
         }
 
-        public void SetUserManagers(UserManager userManager1, MenuBar menubar)
+        public void SetUserManagers(UserManager userManager1, MenuBar menubar, MainWindow mainWindow)
         {
             this.userManager = userManager1;
             this.menuBar = menubar;
-        }
-
-
-        public void SignUpGridVisible()
-        {
-            if (signUpGrid.Visibility == Visibility.Hidden)
-            {
-                signUpGrid.Visibility = Visibility.Visible;
-                menuBar.blurEffect.Radius = 5;
-            }
-            else if (signUpGrid.Visibility == Visibility.Visible)
-            {
-                signUpGrid.Visibility = Visibility.Hidden;
-                menuBar.blurEffect.Radius = 0;
-            }
+            this.mainWindow = mainWindow;
         }
 
 
@@ -63,7 +50,7 @@ namespace FilmLibraryWPF.View.UserControls
             if (CheckEmail(email))
             {
                 userManager.CreateUser(fullName, email, password);
-                SignUpGridVisible();
+                mainWindow.LogInOrSignUpVisible(this);
                 userManager.SaveListOfUsersToJson();
                 MessageBox.Show("Success!");
             }
@@ -83,6 +70,11 @@ namespace FilmLibraryWPF.View.UserControls
                 tbEmail.txtInput.Clear();
                 return false;
             }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.LogInOrSignUpVisible(this);
         }
     }
 }

@@ -7,7 +7,7 @@
              xmlns:LogInWindow="clr-namespace:FilmLibraryWPF.View.UserControls"
              xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
              mc:Ignorable="d" 
-             Height="80" d:DesignWidth="800">
+             Height="80" d:DesignWidth="800"  >
     <Grid>
         <Grid.Effect>
             <BlurEffect x:Name="blurEffect" Radius="0" />

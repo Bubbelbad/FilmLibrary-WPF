@@ -44,21 +44,6 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-        public void LogInGridVisible()
-        {
-            if (logInGrid.Visibility == Visibility.Visible)
-            {
-                logInGrid.Visibility = Visibility.Hidden;
-                menuBar.blurEffect.Radius = 0;
-            }
-            else if (logInGrid.Visibility == Visibility.Hidden)
-            {
-                logInGrid.Visibility = Visibility.Visible;
-                menuBar.blurEffect.Radius = 5;
-            }
-        }
-
-
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string user = tbEmail.txtInput.Text;
@@ -67,7 +52,7 @@ namespace FilmLibraryWPF.View.UserControls
             {
                 if (userManager.LogInUser(user, password))
                 {
-                    LogInGridVisible();
+                    mainWindow.LogInOrSignUpVisible(this);
                     mainWindow.CurrentUser();
                     menuBar.UpdateUserName();
                 }
@@ -84,6 +69,11 @@ namespace FilmLibraryWPF.View.UserControls
                 tbPassword.ChangeText("Password");
                 MessageBox.Show("Something went wrong!");
             }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.LogInOrSignUpVisible(this);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace FilmLibraryWPF
             userManager = new UserManager();
             menuBar.SetMainWindow(this);
             this.logInWindow.SetUserControls(menuBar, userManager, this);
-            this.signUpWindow.SetUserManagers(userManager, menuBar);
+            this.signUpWindow.SetUserManagers(userManager, menuBar, this);
             this.userMenu.SetUserControls(menuBar, userManager, this);
             userControls.Add(signUpWindow);
             userControls.Add(userMenu);
@@ -59,7 +59,7 @@ namespace FilmLibraryWPF
             {
                 control.Visibility = Visibility.Visible;
                 menuBar.blurEffect.Radius = 5;
-                userMenu.blurEffect.Radius = 5;
+                userMenu.Visibility = Visibility.Hidden;
                 if (control == signUpWindow)
                 {
                     logInWindow.Visibility = Visibility.Hidden;
@@ -73,7 +73,7 @@ namespace FilmLibraryWPF
             {
                 control.Visibility = Visibility.Hidden;
                 menuBar.blurEffect.Radius = 0;
-                userMenu.blurEffect.Radius = 0;
+                userMenu.Visibility = Visibility.Hidden;
             }
         }
 
