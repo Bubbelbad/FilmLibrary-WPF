@@ -32,6 +32,9 @@
 
         <!--  Profile  -->
         <userControls:Profile x:Name="profile" Grid.Row="1" Visibility="Hidden"/>
+        
+        <!-- Settings -->
+        <userControls:Settings x:Name="settings" Grid.Row="1" Visibility="Hidden" />
 
         <!--  Log In  -->
         <userControls:LoginWindow

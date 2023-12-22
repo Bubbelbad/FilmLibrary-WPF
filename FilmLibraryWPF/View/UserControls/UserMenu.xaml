@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:FilmLibraryWPF.View.UserControls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="350"
+    VerticalAlignment="Stretch"
     d:DesignWidth="200"
     mc:Ignorable="d"
     Visibility="Visible"
@@ -96,7 +96,7 @@
             FontSize="16"
             Foreground="White" />
 
-        <Button
+        <Button x:Name="settingsBtn"
             Grid.Row="4"
             Grid.Column="1"
             Width="200"
@@ -108,7 +108,8 @@
             BorderBrush="Transparent"
             Content="Settings"
             FontSize="16"
-            Foreground="White" />
+            Foreground="White" 
+            Click="settingsBtn_Click" />
 
         <Button
             x:Name="logOutBtn"
