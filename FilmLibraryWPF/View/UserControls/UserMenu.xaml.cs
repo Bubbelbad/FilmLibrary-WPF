@@ -39,21 +39,15 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-     //   public void UserMenuGridVisible()
-     //   {
-     //       if (userMenuGrid.Visibility == Visibility.Hidden)
-     //       {
-     //           userMenuGrid.Visibility = Visibility.Visible;
-     //       }
-     //       else if (userMenuGrid.Visibility == Visibility.Visible)
-     //       {
-     //           userMenuGrid.Visibility = Visibility.Hidden;
-     //       }
-     //   }
-
         private void profileBtn_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.MenuChoiceVisibility(mainWindow.profile);
+        }
+
+        private void logOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.LogInOrSignUpVisible(mainWindow.logInWindow);
+            mainWindow.profile.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -46,6 +46,7 @@ namespace FilmLibraryWPF
         }
 
 
+
         public string CurrentUser()
         {
             currentUser = userManager.CurrentUser();

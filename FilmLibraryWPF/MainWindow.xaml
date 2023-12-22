@@ -9,6 +9,7 @@
     Title="mainWindow"
     Width="1200"
     Height="750"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d"
     MinWidth="1200"
     MinHeight="750"
@@ -28,6 +29,9 @@
 
         <!--  Menu bar  -->
         <userControls:MenuBar x:Name="menuBar" />
+
+        <!--  Profile  -->
+        <userControls:Profile x:Name="profile" Grid.Row="1" Visibility="Hidden"/>
 
         <!--  Log In  -->
         <userControls:LoginWindow
@@ -66,8 +70,7 @@
         <!--  Footer  -->
         <Rectangle Grid.Row="2" Fill="Black" />
 
-        <!--  Profile  -->
-        <userControls:Profile x:Name="profile" Grid.Row="1" Visibility="Hidden"/>
+        
 
     </Grid>
 </Window>

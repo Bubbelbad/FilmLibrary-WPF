@@ -8,7 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="backgroundCamera.png" />
     <None Remove="blueBackground.jpg" />
+    <None Remove="Images\SplashScreen.png" />
+    <None Remove="SplashScreen.png" />
     <None Remove="View\UserControls\blueBackground.jpg" />
     <None Remove="View\UserControls\userIcon.png" />
   </ItemGroup>
@@ -18,9 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="backgroundCamera.png" />
     <Resource Include="blueBackground.jpg" />
+    <Resource Include="SplashScreen.png" />
     <Resource Include="View\UserControls\blueBackground.jpg" />
     <Resource Include="View\UserControls\userIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Images\SplashScreen.png" />
   </ItemGroup>
 
 </Project>
