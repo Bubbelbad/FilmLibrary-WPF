@@ -53,6 +53,8 @@ namespace FilmLibraryWPF.View.UserControls
                 if (userManager.LogInUser(user, password))
                 {
                     mainWindow.LogInOrSignUpVisible(this);
+                    tbEmail.txtInput.Text = "";
+                    tbPassword.txtInput.Text = "";
                     mainWindow.CurrentUser();
                     menuBar.UpdateUserName();
                 }
@@ -70,6 +72,7 @@ namespace FilmLibraryWPF.View.UserControls
                 MessageBox.Show("Something went wrong!");
             }
         }
+
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {

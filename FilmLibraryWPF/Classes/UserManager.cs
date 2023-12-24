@@ -13,7 +13,7 @@ namespace FilmLibraryWPF.Classes
     public class UserManager
     {
         List<User> listOfUsers = new List<User>();
-        User currentUser;
+        public User currentUser;
 
         public static string usersPath = "users.txt";
 
