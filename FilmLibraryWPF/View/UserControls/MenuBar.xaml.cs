@@ -30,31 +30,24 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
+
         public void UpdateUserName()
         {
             if (mainWindow.currentUser == null)
             {
                 btn_userMenu.Content = "";
                 btn_userMenu.Visibility = Visibility.Hidden;
+                btn_logIn.Visibility = Visibility.Visible;
+                btn_signUp.Visibility = Visibility.Visible;
+
+                
             }
             else
             {
                 btn_userMenu.Visibility = Visibility.Visible;
                 btn_userMenu.Content = mainWindow.currentUser.FullName;
-            }
-        }
-
-
-        //This didn't really work. I need to disable the button if nobody is logged in. 
-        public void LockUserMenu()
-        {
-            if (mainWindow.currentUser == null)
-            {
-                btn_userMenu.IsEnabled = false;
-            }
-            else
-            {
-                btn_userMenu.IsEnabled = true;
+                btn_logIn.Visibility = Visibility.Hidden;
+                btn_signUp.Visibility = Visibility.Hidden;
             }
         }
 
