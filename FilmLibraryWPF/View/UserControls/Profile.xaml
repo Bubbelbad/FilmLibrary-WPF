@@ -26,6 +26,13 @@
                 <ColumnDefinition Width="200" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            <Label
+                x:Name="profileName"
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="User"
+                Foreground="White" 
+                FontSize="16" />
             <Button
                 x:Name="btn_close"
                 Grid.Column="2"

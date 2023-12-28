@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmLibraryWPF.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,20 @@ namespace FilmLibraryWPF.View.UserControls
     /// </summary>
     public partial class Profile : UserControl
     {
+        MainWindow mainWindow;
         public Profile()
         {
             InitializeComponent();
+        }
+
+        public void SetUserControls(MainWindow mainWindow)
+        {
+            this.mainWindow = mainWindow;
+        }
+
+        public void SetInfo()
+        {
+            profileName.Content = mainWindow.currentUser.Email.ToString();
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)

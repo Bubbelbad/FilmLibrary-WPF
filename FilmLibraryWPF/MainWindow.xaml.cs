@@ -39,6 +39,7 @@ namespace FilmLibraryWPF
             this.logInWindow.SetUserControls(menuBar, userManager, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar, this);
             this.userMenu.SetUserControls(menuBar, userManager, this);
+            this.profile.SetUserControls(this);
             userControls.Add(signUpWindow);
             userControls.Add(userMenu);
             userControls.Add(profile);
