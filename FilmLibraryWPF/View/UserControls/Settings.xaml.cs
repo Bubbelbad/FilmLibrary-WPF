@@ -30,5 +30,15 @@ namespace FilmLibraryWPF.View.UserControls
         {
             this.Visibility = Visibility.Hidden;
         }
+
+        private void btn_darkTheme_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_profileInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
