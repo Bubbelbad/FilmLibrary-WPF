@@ -25,47 +25,6 @@
                 <ColumnDefinition Width="200" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button
-                x:Name="btn_close"
-                Grid.Column="2"
-                Width="30"
-                Height="30"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Background="Transparent"
-                BorderBrush="Transparent"
-                Click="btn_close_Click"
-                Content="X"
-                FontSize="16"
-                Foreground="White" />
-            <Button
-                x:Name="btn_darkTheme"
-                Grid.Row="1"
-                Grid.Column="0"
-                Height="30"
-                Margin="5,30,0,0"
-                HorizontalContentAlignment="Left"
-                VerticalAlignment="Top"
-                BorderBrush="Transparent"
-                Background="Transparent"
-                Content="Dark Theme"
-                FontSize="16"
-                Foreground="White" 
-                Click="btn_darkTheme_Click"/>
-            <Button
-                x:Name="btn_profileInfo"
-                BorderBrush="Transparent"
-                Grid.Row="1"
-                Grid.Column="0"
-                Height="30"
-                Margin="5,0,0,0"
-                VerticalAlignment="Top"
-                HorizontalContentAlignment="Left"
-                Background="Transparent"
-                Content="Profile Info"
-                FontSize="16"
-                Foreground="White"
-                Click="btn_profileInfo_Click"/>
 
             <Border
                 x:Name="settingsInfo"
@@ -89,6 +48,50 @@
                 Background="#FF4F5356"
                 CornerRadius="0,0,8,8"
                 Opacity="0.2" />
+            <Button
+                x:Name="btn_close"
+                Grid.Column="2"
+                Width="30"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="btn_close_Click"
+                Content="X"
+                FontSize="16"
+                Foreground="White" />
+            <Button
+                x:Name="btn_darkTheme"
+                Grid.Row="1"
+                Grid.Column="0"
+                Height="30"
+                Margin="5,30,0,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="btn_darkTheme_Click"
+                Content="Dark Theme"
+                FontSize="16"
+                Foreground="White"
+                Panel.ZIndex="1" />
+            <Button
+                x:Name="btn_profileInfo"
+                Grid.Row="1"
+                Grid.Column="0"
+                Height="30"
+                Margin="5,0,0,0"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="btn_profileInfo_Click"
+                Content="Profile Info"
+                FontSize="16"
+                Foreground="White" 
+                Panel.ZIndex="1" />
+
         </Grid>
     </Border>
 </UserControl>
