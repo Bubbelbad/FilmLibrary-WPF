@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -33,14 +34,33 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btn_darkTheme_Click(object sender, RoutedEventArgs e)
         {
-            
+            PanelVisibility(settingsPanel);
         }
 
         private void btn_profileInfo_Click(object sender, RoutedEventArgs e)
         {
-            if (profilePanel.Visibility == Visibility.Hidden)
+            PanelVisibility(profilePanel);
+        }
+
+        public void PanelVisibility(StackPanel panel)
+        {
+            if (panel.Visibility == Visibility.Hidden)
             {
-                profilePanel.Visibility = Visibility.Visible;
+                panel.Visibility = Visibility.Visible;
+                
+                if (panel == profilePanel)
+                {
+                    settingsPanel.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                   profilePanel.Visibility = Visibility.Hidden;
+                }
+            }
+            else
+            {
+                panel.Visibility = Visibility.Hidden;
+               // userMenu.Visibility = Visibility.Hidden;
             }
         }
     }

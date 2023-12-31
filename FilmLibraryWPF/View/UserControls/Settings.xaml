@@ -110,7 +110,8 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label
-                        Width="100"
+                        Grid.Column="0"
+                        Width="150"
                         Height="30"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
@@ -128,6 +129,61 @@
                         VerticalAlignment="Top"
                         Background="Transparent"
                         Foreground="White" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Width="150"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Content="New Password"
+                        FontSize="16"
+                        Foreground="White" />
+                    <TextBox
+                        x:Name="passwordTB"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Width="200"
+                        Height="30"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        Foreground="White" />
+                </Grid>
+            </StackPanel>
+            <StackPanel
+                x:Name="settingsPanel"
+                Grid.Row="1"
+                Grid.Column="1"
+                Visibility="Visible">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label 
+                        Grid.Column="0"
+                        Width="150"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Content="Dark/Light Theme"
+                        FontSize="16"
+                        Foreground="White" />
+                    <ToggleButton 
+                        Grid.Column="1"
+                        Background="Transparent"
+                        />
+
+
                 </Grid>
 
             </StackPanel>
