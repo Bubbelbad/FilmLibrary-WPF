@@ -38,7 +38,10 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btn_profileInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            if (profilePanel.Visibility == Visibility.Hidden)
+            {
+                profilePanel.Visibility = Visibility.Visible;
+            }
         }
     }
 }

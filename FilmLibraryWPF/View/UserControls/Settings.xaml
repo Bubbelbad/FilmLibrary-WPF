@@ -69,13 +69,13 @@
                 Margin="5,30,0,0"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Left"
+                Panel.ZIndex="1"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 Click="btn_darkTheme_Click"
                 Content="Dark Theme"
                 FontSize="16"
-                Foreground="White"
-                Panel.ZIndex="1" />
+                Foreground="White" />
             <Button
                 x:Name="btn_profileInfo"
                 Grid.Row="1"
@@ -84,13 +84,53 @@
                 Margin="5,0,0,0"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Left"
+                Panel.ZIndex="1"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 Click="btn_profileInfo_Click"
                 Content="Profile Info"
                 FontSize="16"
-                Foreground="White" 
-                Panel.ZIndex="1" />
+                Foreground="White" />
+            <StackPanel
+                x:Name="profilePanel"
+                Grid.Row="1"
+                Grid.Column="1"
+                Visibility="Hidden">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Width="100"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Content="UserName"
+                        FontSize="16"
+                        Foreground="White" />
+                    <TextBox
+                        x:Name="profileTB"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Width="200"
+                        Height="30"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        Foreground="White" />
+                </Grid>
+
+            </StackPanel>
 
         </Grid>
     </Border>
