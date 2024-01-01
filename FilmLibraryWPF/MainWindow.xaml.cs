@@ -30,7 +30,6 @@ namespace FilmLibraryWPF
         public User currentUser;
         List<UserControl> userControls = new List<UserControl>();
         
-
         public MainWindow()
         {
             InitializeComponent();
@@ -46,13 +45,10 @@ namespace FilmLibraryWPF
             userControls.Add(userMenu);
         }
 
-
-
         public void CurrentUser()
         {
             currentUser = userManager.CurrentUser();
         }
-
 
         public void LogInOrSignUpVisible(UserControl control)
         {
@@ -77,7 +73,6 @@ namespace FilmLibraryWPF
                 userMenu.Visibility = Visibility.Hidden;
             }
         }
-
 
         //Takes the userControl that should be visible as argument and hides the rest of the userControls
         public void MenuChoiceVisibility(UserControl control)

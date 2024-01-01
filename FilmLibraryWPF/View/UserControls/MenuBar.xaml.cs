@@ -30,7 +30,6 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
-
         public void UpdateUserName()
         {
             if (mainWindow.currentUser == null)
@@ -38,9 +37,7 @@ namespace FilmLibraryWPF.View.UserControls
                 btn_userMenu.Content = "";
                 btn_userMenu.Visibility = Visibility.Hidden;
                 btn_logIn.Visibility = Visibility.Visible;
-                btn_signUp.Visibility = Visibility.Visible;
-
-                
+                btn_signUp.Visibility = Visibility.Visible;   
             }
             else
             {
@@ -51,12 +48,10 @@ namespace FilmLibraryWPF.View.UserControls
             }
         }
 
-
         public void SetMainWindow(MainWindow mainWindow1)
         {
             this.mainWindow = mainWindow1;
         }
-
 
         //Exit
         private void MenuExit_Click(object sender, RoutedEventArgs e)
@@ -64,20 +59,17 @@ namespace FilmLibraryWPF.View.UserControls
             System.Environment.Exit(0);
         }
 
-
         //File
         private void MenuFile_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-
         //Save
         private void MenuSave_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
 
         //About
         private void MenuAbout_Click(object sender, RoutedEventArgs e)
@@ -86,18 +78,15 @@ namespace FilmLibraryWPF.View.UserControls
                             "\nYou can find the code on github! ");
         }
 
-
-       private void logInWindow_Click(object sender, RoutedEventArgs e)
-       {
-           mainWindow.LogInOrSignUpVisible(mainWindow.logInWindow);
-       }
-
+        private void logInWindow_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.LogInOrSignUpVisible(mainWindow.logInWindow);
+        }
 
         private void signInWindow_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.LogInOrSignUpVisible(mainWindow.signUpWindow); 
         }
-
 
         private void btn_userMenu_Click(object sender, RoutedEventArgs e)
         {

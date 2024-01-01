@@ -42,12 +42,12 @@ namespace FilmLibraryWPF.View.UserControls
             PanelVisibility(profilePanel);
         }
 
+        //Function that makes desired SpackPanel visible, and the rest of them hidden. 
         public void PanelVisibility(StackPanel panel)
         {
             if (panel.Visibility == Visibility.Hidden)
             {
                 panel.Visibility = Visibility.Visible;
-                
                 if (panel == profilePanel)
                 {
                     settingsPanel.Visibility = Visibility.Hidden;

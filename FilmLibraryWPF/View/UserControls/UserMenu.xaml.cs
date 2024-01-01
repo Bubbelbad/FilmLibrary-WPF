@@ -32,7 +32,6 @@ namespace FilmLibraryWPF.View.UserControls
             this.mainWindow = mainWindow;
         }
 
-
         public UserMenu()
         {
             InitializeComponent();
