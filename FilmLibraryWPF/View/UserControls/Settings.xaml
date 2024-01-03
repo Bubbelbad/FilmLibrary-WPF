@@ -10,7 +10,7 @@
     mc:Ignorable="d">
     <Border
         Margin="20,20,20,20"
-        Background="#FF1A1E3A"
+        Background="Black"
         CornerRadius="8,8,8,8">
         <Border.Effect>
             <DropShadowEffect />
@@ -73,7 +73,7 @@
                 Background="Transparent"
                 BorderBrush="Transparent"
                 Click="btn_profileInfo_Click"
-                Content="Profile Info"
+                Content="Account"
                 FontSize="16"
                 Foreground="White" />
             <StackPanel

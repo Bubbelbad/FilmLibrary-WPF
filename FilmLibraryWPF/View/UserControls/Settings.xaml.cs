@@ -59,7 +59,7 @@ namespace FilmLibraryWPF.View.UserControls
             }
             else
             {
-                panel.Visibility = Visibility.Hidden;
+                panel.Visibility = Visibility.Visible;
                // userMenu.Visibility = Visibility.Hidden;
             }
         }
