@@ -16,19 +16,18 @@ using System.Windows.Shapes;
 namespace FilmLibraryWPF.View.UserControls
 {
     /// <summary>
-    /// Interaction logic for MovieDisplay.xaml
+    /// Interaction logic for Movie.xaml
     /// </summary>
-    public partial class MovieDisplay : UserControl
+    public partial class Movie : UserControl
     {
-        public MovieDisplay()
+        public Movie()
         {
             InitializeComponent();
         }
 
-        private void Movie1_MouseEnter(object sender, MouseEventArgs e)
+        private void button_movie_MouseEnter(object sender, MouseEventArgs e)
         {
-            Movie1.Height += 10;
-            Movie1.Width += 10;
+            
         }
     }
 }

@@ -9,11 +9,10 @@
     Title="mainWindow"
     Width="1200"
     Height="750"
-    WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d"
     MinWidth="1200"
     MinHeight="750"
-    >
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/blueBackground.jpg" />
@@ -29,12 +28,6 @@
 
         <!--  Menu bar  -->
         <userControls:MenuBar x:Name="menuBar" />
-
-        <!--  Profile  -->
-        <userControls:Profile x:Name="profile" Grid.Row="1" Visibility="Hidden"/>
-        
-        <!-- Settings -->
-        <userControls:Settings x:Name="settings" Grid.Row="1" Visibility="Hidden" />
 
         <!--  Log In  -->
         <userControls:LoginWindow
@@ -68,12 +61,30 @@
         <userControls:UserMenu
             x:Name="userMenu"
             Grid.Row="1"
-            VerticalAlignment="Top" />
+            VerticalAlignment="Top"
+            Panel.ZIndex="3" />
+
+        <!--  Profile  -->
+        <userControls:Profile
+            x:Name="profile"
+            Grid.Row="1"
+            Panel.ZIndex="2"
+            Visibility="Hidden" />
+
+        <!--  Settings  -->
+        <userControls:Settings
+            x:Name="settings"
+            Grid.Row="1"
+            Panel.ZIndex="2"
+            Visibility="Hidden" />
+
+
+        <!--  MovieDisplayy  -->
+        <userControls:MovieDisplay x:Name="MovieDisplay" Grid.Row="1" />
+
 
         <!--  Footer  -->
         <Rectangle Grid.Row="2" Fill="Black" />
-
-        
 
     </Grid>
 </Window>
