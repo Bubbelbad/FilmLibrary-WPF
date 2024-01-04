@@ -29,8 +29,8 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Content="User"
-                Foreground="White" 
-                FontSize="16" />
+                FontSize="16"
+                Foreground="White" />
             <Button
                 x:Name="btn_close"
                 Grid.Column="2"
@@ -47,14 +47,26 @@
             <Border
                 x:Name="ProfileInfo"
                 Grid.Row="1"
+                Width="180"
+                Height="180"
+                Margin="0,10,0,0"
+                VerticalAlignment="Top"
                 Panel.ZIndex="1"
                 Background="#FF4F5356"
                 CornerRadius="90,90,90,90"
-                Opacity="0.2"
-                Height="180"
-                Width="180" 
-                VerticalAlignment="Top"
-                Margin="0,10,0,0"/>
+                Opacity="0.2" />
+            <Border
+                x:Name="ProfileInfo2"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10,10,10,10"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Panel.ZIndex="-1"
+                Background="#FF4F5356"
+                CornerRadius="10,10,10,10"
+                Opacity="0.2" />
+
         </Grid>
     </Border>
 </UserControl>
