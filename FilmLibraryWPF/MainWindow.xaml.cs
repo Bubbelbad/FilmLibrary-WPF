@@ -48,6 +48,10 @@ namespace FilmLibraryWPF
         public void CurrentUser()
         {
             currentUser = userManager.CurrentUser();
+            if (currentUser != null)
+            {
+                MovieDisplay.Visibility = Visibility.Visible;
+            }
         }
 
         public void LogInOrSignUpVisible(UserControl control)
@@ -74,7 +78,7 @@ namespace FilmLibraryWPF
             }
         }
 
-        //Takes the userControl that should be visible as argument and hides the rest of the userControls
+        //Takes the userControl from UserMenu that should be visible as argument and hides the rest of the userControls
         public void MenuChoiceVisibility(UserControl control)
         {
             control.Visibility = Visibility.Visible;
