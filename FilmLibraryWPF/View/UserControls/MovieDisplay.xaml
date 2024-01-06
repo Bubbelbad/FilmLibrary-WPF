@@ -6,64 +6,180 @@
     xmlns:local="clr-namespace:FilmLibraryWPF.View.UserControls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
-    d:DesignHeight="750"
+    d:DesignHeight="1500"
     d:DesignWidth="1200"
-    mc:Ignorable="d"
-    Visibility="Hidden">
+    Visibility="Hidden"
+    mc:Ignorable="d">
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <StackPanel>
+            <StackPanel
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
+                <!--  Movies 1  -->
+                <userControls:Movie
+                    x:Name="Movie1"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
 
-        <!--  Movies  -->
-        <userControls:Movie
-            x:Name="Movie1"
-            Grid.Row="0"
-            Width="200"
-            Height="300"
-            HorizontalAlignment="Left"
-            Panel.ZIndex="1" />
-        <userControls:Movie
-            x:Name="Movie2"
-            Grid.Row="0"
-            Width="200"
-            Height="300"
-            Margin="200,0,0,0"
-            HorizontalAlignment="Left"
-            Panel.ZIndex="1" />
-        <userControls:Movie
-            x:Name="Movie3"
-            Grid.Row="0"
-            Width="200"
-            Height="300"
-            Margin="400,0,0,0"
-            HorizontalAlignment="Left"
-            Panel.ZIndex="1" />
-        <userControls:Movie
-            x:Name="Movie4"
-            Grid.Row="0"
-            Width="200"
-            Height="300"
-            Margin="600,0,0,0"
-            HorizontalAlignment="Left"
-            Panel.ZIndex="1" />
-        <userControls:Movie
-            x:Name="Movie5"
-            Grid.Row="0"
-            Width="200"
-            Height="300"
-            Margin="800,0,0,0"
-            HorizontalAlignment="Left"
-            Panel.ZIndex="1" />
-        <userControls:Movie
-            x:Name="Movie6"
-            Grid.Row="0"
-            Width="200"
-            Height="300"
-            Margin="1000,0,0,0"
-            HorizontalAlignment="Left"
-            Panel.ZIndex="1" />
+                <userControls:Movie
+                    x:Name="Movie2"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
 
+                <userControls:Movie
+                    x:Name="Movie3"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie4"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie5"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie6"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+            </StackPanel>
+
+            <StackPanel
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
+                <!--  Movies 2  -->
+                <userControls:Movie
+                    x:Name="Movie7"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie8"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie9"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie10"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie11"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie12"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+            </StackPanel>
+
+            <StackPanel
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
+                <!--  Movies 3  -->
+                <userControls:Movie
+                    x:Name="Movie13"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie14"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie15"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie16"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie17"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+
+                <userControls:Movie
+                    x:Name="Movie18"
+                    Grid.Row="0"
+                    Width="200"
+                    Height="300"
+                    HorizontalAlignment="Left"
+                    Panel.ZIndex="1" />
+            </StackPanel>
+        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>
