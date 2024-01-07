@@ -80,8 +80,10 @@
 
 
         <!--  MovieDisplayy  -->
-        <userControls:MovieDisplay x:Name="MovieDisplay" Grid.Row="1" />
-
+        <userControls:MovieDisplay x:Name="movieDisplay" Grid.Row="1" />
+        
+        <!-- Movie Profile-->
+        <userControls:movieBrowse />
 
         <!--  Footer  -->
         <Rectangle Grid.Row="2" Fill="Black" />

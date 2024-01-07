@@ -20,9 +20,16 @@ namespace FilmLibraryWPF.View.UserControls
     /// </summary>
     public partial class MovieDisplay : UserControl
     {
+        MainWindow mainWindow;
+
         public MovieDisplay()
         {
             InitializeComponent();
+        }
+
+        public void SetUserControls(MainWindow mainWindow)
+        {
+            this.mainWindow = mainWindow;
         }
 
         private void Movie1_MouseEnter(object sender, MouseEventArgs e)

@@ -51,7 +51,7 @@ namespace FilmLibraryWPF.View.UserControls
             mainWindow.LogInOrSignUpVisible(mainWindow.logInWindow);
             mainWindow.profile.Visibility = Visibility.Hidden;
             mainWindow.settings.Visibility = Visibility.Hidden;
-            mainWindow.MovieDisplay.Visibility = Visibility.Hidden;
+            mainWindow.movieDisplay.Visibility = Visibility.Hidden;
         }
 
         private void settingsBtn_Click(object sender, RoutedEventArgs e)

@@ -40,11 +40,13 @@ namespace FilmLibraryWPF
             this.userMenu.SetUserControls(menuBar, userManager, this);
             this.profile.SetUserControls(this);
             this.settings.SetUserControls(this);
+            this.movieDisplay.SetUserControls(this);
             userControls.Add(signUpWindow);
             userControls.Add(userMenu);
             userControls.Add(profile);
             userControls.Add(userMenu);
-            userControls.Add(MovieDisplay);
+            userControls.Add(movieDisplay);
+            
         }
 
         public void CurrentUser()
@@ -52,7 +54,7 @@ namespace FilmLibraryWPF
             currentUser = userManager.CurrentUser();
             if (currentUser != null)
             {
-                MovieDisplay.Visibility = Visibility.Visible;
+                movieDisplay.Visibility = Visibility.Visible;
             }
         }
 

@@ -35,7 +35,7 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.MenuChoiceVisibility(mainWindow.MovieDisplay);
+            mainWindow.MenuChoiceVisibility(mainWindow.movieDisplay);
             this.Visibility = Visibility.Hidden;
         }
 

@@ -1,0 +1,71 @@
+﻿<UserControl
+    x:Class="FilmLibraryWPF.View.UserControls.movieBrowse"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FilmLibraryWPF.View.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="650"
+    d:DesignWidth="1200"
+    mc:Ignorable="d">
+    <Border
+        Margin="20,20,20,20"
+        Background="Transparent"
+        CornerRadius="8,8,8,8">
+        <Border.Effect>
+            <DropShadowEffect />
+        </Border.Effect>
+        <Grid Margin="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Margin="30,30,0,0"
+                x:Name="MovieTitle"
+                Grid.Row="0"
+                Grid.Column="1"
+                Content="Title"
+                FontSize="16"
+                Foreground="White" />
+            <Button
+                x:Name="btn_close"
+                Grid.Column="2"
+                Width="30"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="btn_close_Click"
+                Content="X"
+                FontSize="16"
+                Foreground="White" />
+            <Border
+                x:Name="ProfileInfo"
+                Grid.Row="1"
+                Width="180"
+                Height="180"
+                Margin="0,10,0,0"
+                VerticalAlignment="Top"
+                Panel.ZIndex="1"
+                Background="Black"
+                CornerRadius="10,10,10,10"
+                Opacity="0.2" />
+            <Border
+                x:Name="ProfileInfo2"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10,10,10,10"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Panel.ZIndex="-1"
+                Background="Black"
+                CornerRadius="10,10,10,10"
+                Opacity="0.2" />
+        </Grid>
+    </Border>
+</UserControl>
