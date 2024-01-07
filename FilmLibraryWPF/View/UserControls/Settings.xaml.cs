@@ -22,13 +22,20 @@ namespace FilmLibraryWPF.View.UserControls
     /// </summary>
     public partial class Settings : UserControl
     {
+        MainWindow mainWindow;
         public Settings()
         {
             InitializeComponent();
         }
 
+        public void SetUserControls(MainWindow mainWindow)
+        {
+            this.mainWindow = mainWindow;
+        }
+
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
+            mainWindow.MenuChoiceVisibility(mainWindow.MovieDisplay);
             this.Visibility = Visibility.Hidden;
         }
 
@@ -60,7 +67,6 @@ namespace FilmLibraryWPF.View.UserControls
             else
             {
                 panel.Visibility = Visibility.Visible;
-               // userMenu.Visibility = Visibility.Hidden;
             }
         }
     }
