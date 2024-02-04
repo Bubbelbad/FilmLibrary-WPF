@@ -12,10 +12,10 @@ namespace FilmLibraryWPF.Classes
     {
         List<Movie> movies = new List<Movie>();
 
-        public void AddMovie(string title, string description, string imagePath)
-        {
-            movies.Add(new Movie(title, description, imagePath));
-        }
+       // public void AddMovie(string title, string description, string imagePath)
+       // {
+       //     movies.Add(new Classes.Movie(title, description, imagePath));
+       // }
 
 
         public List<Movie> SearchMovie(string title)

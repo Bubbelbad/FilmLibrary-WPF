@@ -24,11 +24,17 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Använd Kaggle.com för att få ner dataset med info om filmer för träning? 
-        //Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
+        //- Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
+        //- Gör så storleken anpassas efter skärmstorlek vid uppstart!
+        //- Koppla inlogg till användare
+
         UserManager userManager;
+        DatabaseConnection databaseConnection = new DatabaseConnection();
         public User currentUser;
         List<UserControl> userControls = new List<UserControl>();
+
+        Dictionary<int, Classes.Movie> movies = new Dictionary<int, Classes.Movie>();
+        List<Classes.Movie> movieList = new List<Classes.Movie>();
         
         public MainWindow()
         {
@@ -46,7 +52,7 @@ namespace FilmLibraryWPF
             userControls.Add(profile);
             userControls.Add(userMenu);
             userControls.Add(movieDisplay);
-            
+            movies = databaseConnection.GetMovies();
         }
 
         public void CurrentUser()
