@@ -26,6 +26,18 @@ namespace FilmLibraryWPF
                 "PASSWORD=" + password + ";";
         }
 
+        public DatabaseConnection(bool admin)
+        {
+            if (admin == true)
+            {
+                connectionString =
+                "SERVER=" + server + ";" +
+                "DATABASE=" + database + ";" +
+                "UID=" + "admin" + ";" +
+                "PASSWORD=" + "admin" + ";";
+            }
+        }
+
         public Dictionary<int, Movie> GetMovies()
         {
             Dictionary<int, Movie> movies = new Dictionary<int, Movie>();
@@ -36,12 +48,11 @@ namespace FilmLibraryWPF
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read()) 
             {
-               // Movie movie = new Movie((int)reader["Id"], (string(reader["Title"], (string)reader["Description"], (string)reader["Url]"]));
-                //movies.Add(movie.Id, movie);
+                Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (string)reader["Runtime"], (int)reader["rating"], (int)reader["ReleaseYear"]);
+                movies.Add(movie.Id, movie);
             }
             connection.Close();
             return movies;
-            
         }
     }
 }
