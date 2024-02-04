@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace FilmLibraryWPF
 {
-    class DatabaseConnection
+     class DatabaseConnection
     {
         string server = "localhost";
-        string database = "MiniLibraryWPF";
+        string database = "Filmlibrary";
         string username = "admin";
         string password = "admin";
 
-        string connectionString = string.Empty;
+        string connectionString = "";
 
         public DatabaseConnection()
         {
             connectionString =
                 "SERVER=" + server + ";" +
                 "DATABASE=" + database + ";" +
-                "UID" + username + ";" +
+                "UID=" + username + ";" +
                 "PASSWORD=" + password + ";";
         }
 
@@ -43,12 +43,12 @@ namespace FilmLibraryWPF
             Dictionary<int, Movie> movies = new Dictionary<int, Movie>();
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT * FROM movies;";
+            string query = "SELECT * FROM movie;";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read()) 
             {
-                Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (string)reader["Runtime"], (int)reader["rating"], (int)reader["ReleaseYear"]);
+                Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (int)reader["Runtime"], (int)reader["Rating"], (int)reader["Release_Year"]);
                 movies.Add(movie.Id, movie);
             }
             connection.Close();

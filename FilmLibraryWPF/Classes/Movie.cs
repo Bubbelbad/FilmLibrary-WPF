@@ -11,13 +11,13 @@ namespace FilmLibraryWPF.Classes
         public int Id { get; set; }
         public string Title { get; private set; }
         private string Description { get; set; }
-        private string Runtime { get; set; }
+        private int Runtime { get; set; }
         private int rating { get; set; }
         private int ReleaseYear { get; set; }
 
         public static int nextId = 1;
 
-        public Movie(int id, string title, string description, string runtime, int rating, int releaseYear)
+        public Movie(int id, string title, string description, int runtime, int rating, int releaseYear)
         {
             this.Id = id;
             this.Title = title;
