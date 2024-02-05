@@ -41,8 +41,8 @@ namespace FilmLibraryWPF
             InitializeComponent();
             userManager = new UserManager();
             menuBar.SetMainWindow(this);
-            this.logInWindow.SetUserControls(menuBar, userManager, this);
-            this.signUpWindow.SetUserManagers(userManager, menuBar, this);
+            this.logInWindow.SetUserControls(menuBar, userManager, databaseConnection, this);
+            this.signUpWindow.SetUserManagers(userManager, menuBar, databaseConnection, this);
             this.userMenu.SetUserControls(menuBar, userManager, this);
             this.profile.SetUserControls(this);
             this.settings.SetUserControls(this);

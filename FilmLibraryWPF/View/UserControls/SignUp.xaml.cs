@@ -23,6 +23,7 @@ namespace FilmLibraryWPF.View.UserControls
     {
         UserManager userManager;
         MenuBar menuBar;
+        DatabaseConnection databaseConnection;
         MainWindow mainWindow;
 
         public SignUp()
@@ -33,11 +34,12 @@ namespace FilmLibraryWPF.View.UserControls
             tbPassword.ChangeText("Password");
         }
 
-        public void SetUserManagers(UserManager userManager1, MenuBar menubar, MainWindow mainWindow)
+        public void SetUserManagers(UserManager userManager1, MenuBar menubar1, DatabaseConnection databaseConnection1, MainWindow mainWindow1)
         {
             this.userManager = userManager1;
-            this.menuBar = menubar;
-            this.mainWindow = mainWindow;
+            this.menuBar = menubar1;
+            this.databaseConnection = databaseConnection1;
+            this.mainWindow = mainWindow1;
         }
 
 

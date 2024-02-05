@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace FilmLibraryWPF.Classes
 {
-    class Movie
+    public class Movie
     {
         public int Id { get; set; }
         public string Title { get; private set; }
-        private string Description { get; set; }
-        private int Runtime { get; set; }
-        private int rating { get; set; }
-        private int ReleaseYear { get; set; }
+        public string Description { get; set; }
+        public int Runtime { get; set; }
+        public int rating { get; set; }
+        public int ReleaseYear { get; set; }
 
         public static int nextId = 1;
 

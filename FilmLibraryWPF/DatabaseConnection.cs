@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FilmLibraryWPF
 {
-     class DatabaseConnection
+    public class DatabaseConnection
     {
         string server = "localhost";
         string database = "Filmlibrary";
@@ -46,7 +46,7 @@ namespace FilmLibraryWPF
             string query = "SELECT * FROM movie;";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read()) 
+            while (reader.Read())
             {
                 Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (int)reader["Runtime"], (int)reader["Rating"], (int)reader["Release_Year"]);
                 movies.Add(movie.Id, movie);
