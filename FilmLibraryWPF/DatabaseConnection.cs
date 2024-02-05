@@ -54,5 +54,22 @@ namespace FilmLibraryWPF
             connection.Close();
             return movies;
         }
+
+        public Dictionary<int, User> GetUsers()
+        {
+            Dictionary<int, User> users = new Dictionary<int, User>();
+            MySqlConnection connection = new MySqlConnection();
+            connection.Open();
+            string query = "SELECT * FROM user;";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                User user = new User((int)reader["Id"], (string)reader["first_name"], (string)reader["last_name"], (string)reader["email"], (string)reader["password"],  (bool)reader["admin"]);
+                users.Add(user.Id, user);
+            }
+            connection.Close();
+            return users;
+        }
     }
 }

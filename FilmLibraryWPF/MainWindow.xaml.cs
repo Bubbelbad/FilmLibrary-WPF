@@ -39,7 +39,7 @@ namespace FilmLibraryWPF
         public MainWindow()
         {
             InitializeComponent();
-            userManager = new UserManager();
+            userManager = new UserManager(databaseConnection);
             menuBar.SetMainWindow(this);
             this.logInWindow.SetUserControls(menuBar, userManager, databaseConnection, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar, databaseConnection, this);

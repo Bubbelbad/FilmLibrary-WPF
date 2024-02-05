@@ -12,15 +12,18 @@ namespace FilmLibraryWPF.Classes
 {
     public class UserManager
     {
+        DatabaseConnection databaseConnection;
         List<User> listOfUsers = new List<User>();
         public User currentUser;
 
         public static string usersPath = "users.txt";
 
 
-        public UserManager()
+        public UserManager(DatabaseConnection databaseConnection)
         {
-            LoadListOfUsersFromFile();
+           // LoadListOfUsersFromFile();
+            this.databaseConnection = databaseConnection;
+            databaseConnection.GetUsers();
         }
 
 
@@ -30,11 +33,11 @@ namespace FilmLibraryWPF.Classes
         }
 
 
-        public bool CreateUser(string fullName, string email, string password)
-        {
-            listOfUsers.Add(new User(fullName, email, password));
-            return true;
-        }
+      //  public bool CreateUser(string fullName, string email, string password)
+      //  {
+      //      listOfUsers.Add(new User(fullName, email, password));
+      //      return true;
+      //  }
 
 
         public bool LogInUser(string username, string password)
@@ -66,28 +69,28 @@ namespace FilmLibraryWPF.Classes
         }
 
 
-        public void LoadListOfUsersFromFile()
-        {
-            if (!File.Exists(usersPath))
-            {
-                listOfUsers.Add(new User("admin", "admin", "admin"));
-
-            }
-            else
-            {
-                try
-                {
-                    using (StreamReader sr = new StreamReader(usersPath))
-                    {
-                        string json = sr.ReadToEnd();
-                        listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Didnt work");
-                }
-            }
-        }
+       // public void LoadListOfUsersFromFile()
+       // {
+       //     if (!File.Exists(usersPath))
+       //     {
+       //         listOfUsers.Add(new User("admin", "admin", "admin"));
+       //
+       //     }
+       //     else
+       //     {
+       //         try
+       //         {
+       //             using (StreamReader sr = new StreamReader(usersPath))
+       //             {
+       //                 string json = sr.ReadToEnd();
+       //                 listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
+       //             }
+       //         }
+       //         catch
+       //         {
+       //             MessageBox.Show("Didnt work");
+       //         }
+       //     }
+       // }
     }
 }

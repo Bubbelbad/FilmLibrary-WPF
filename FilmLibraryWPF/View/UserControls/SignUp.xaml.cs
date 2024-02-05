@@ -51,7 +51,7 @@ namespace FilmLibraryWPF.View.UserControls
 
             if (CheckEmail(email))
             {
-                userManager.CreateUser(fullName, email, password);
+              //  userManager.CreateUser(fullName, email, password);
                 mainWindow.LogInOrSignUpVisible(this);
                 userManager.SaveListOfUsersToJson();
                 MessageBox.Show("Success!");
