@@ -71,5 +71,15 @@ namespace FilmLibraryWPF
             connection.Close();
             return users;
         }
+
+        public void AddMovieToFavourites()
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.Open();
+            string query = "CALL add_movie_to_favourite;";
+            MySqlCommand command = new MySqlCommand( query, con);
+            int rowsAffected = command.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
