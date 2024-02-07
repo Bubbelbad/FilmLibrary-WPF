@@ -12,15 +12,20 @@ namespace FilmLibraryWPF.Classes
 {
     public class UserManager
     {
+        DatabaseConnection databaseConnection;
+        Dictionary<int, User> userDictionary = new Dictionary<int, User>();
         List<User> listOfUsers = new List<User>();
         public User currentUser;
 
-        public static string usersPath = "users.txt";
+       // public static string usersPath = "users.txt";
+        
 
-
-        public UserManager()
+        public UserManager(DatabaseConnection databaseConnection)
         {
-            LoadListOfUsersFromFile();
+           // LoadListOfUsersFromFile();
+            this.databaseConnection = databaseConnection;
+            userDictionary = databaseConnection.GetUsers();
+            listOfUsers = userDictionary.Values.ToList();
         }
 
 
@@ -30,11 +35,11 @@ namespace FilmLibraryWPF.Classes
         }
 
 
-        public bool CreateUser(string fullName, string email, string password)
-        {
-            listOfUsers.Add(new User(fullName, email, password));
-            return true;
-        }
+      //  public bool CreateUser(string fullName, string email, string password)
+      //  {
+      //      listOfUsers.Add(new User(fullName, email, password));
+      //      return true;
+      //  }
 
 
         public bool LogInUser(string username, string password)
@@ -56,38 +61,50 @@ namespace FilmLibraryWPF.Classes
             return false;
         }
 
-
-        public void SaveListOfUsersToJson()
+        public DatabaseConnection VerifyIfAdmin()
         {
-            string json = JsonConvert.SerializeObject(listOfUsers, Formatting.Indented);
-            StreamWriter sw = new StreamWriter(usersPath);
-            sw.WriteLine(json);
-            sw.Close();
-        }
-
-
-        public void LoadListOfUsersFromFile()
-        {
-            if (!File.Exists(usersPath))
+            if (currentUser.Admin == true)
             {
-                listOfUsers.Add(new User("admin", "admin", "admin"));
-
+                return databaseConnection = new DatabaseConnection(true);
             }
             else
             {
-                try
-                {
-                    using (StreamReader sr = new StreamReader(usersPath))
-                    {
-                        string json = sr.ReadToEnd();
-                        listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Didnt work");
-                }
+                return databaseConnection;
             }
         }
+
+
+       // public void SaveListOfUsersToJson()
+       // {
+       //     string json = JsonConvert.SerializeObject(listOfUsers, Formatting.Indented);
+       //     StreamWriter sw = new StreamWriter(usersPath);
+       //     sw.WriteLine(json);
+       //     sw.Close();
+       // }
+
+
+       // public void LoadListOfUsersFromFile()
+       // {
+       //     if (!File.Exists(usersPath))
+       //     {
+       //         listOfUsers.Add(new User("admin", "admin", "admin"));
+       //
+       //     }
+       //     else
+       //     {
+       //         try
+       //         {
+       //             using (StreamReader sr = new StreamReader(usersPath))
+       //             {
+       //                 string json = sr.ReadToEnd();
+       //                 listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
+       //             }
+       //         }
+       //         catch
+       //         {
+       //             MessageBox.Show("Didnt work");
+       //         }
+       //     }
+       // }
     }
 }

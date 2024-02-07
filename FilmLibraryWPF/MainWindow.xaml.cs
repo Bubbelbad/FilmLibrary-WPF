@@ -30,19 +30,19 @@ namespace FilmLibraryWPF
 
         UserManager userManager;
         DatabaseConnection databaseConnection = new DatabaseConnection();
-        public User currentUser;
         List<UserControl> userControls = new List<UserControl>();
-
-        Dictionary<int, Classes.Movie> movies = new Dictionary<int, Classes.Movie>();
+        Dictionary<int, Classes.Movie> movieDict = new Dictionary<int, Classes.Movie>();
         List<Classes.Movie> movieList = new List<Classes.Movie>();
-        
+
+        public User currentUser;
+
         public MainWindow()
         {
             InitializeComponent();
-            userManager = new UserManager();
+            userManager = new UserManager(databaseConnection);
             menuBar.SetMainWindow(this);
-            this.logInWindow.SetUserControls(menuBar, userManager, this);
-            this.signUpWindow.SetUserManagers(userManager, menuBar, this);
+            this.logInWindow.SetUserControls(menuBar, userManager, databaseConnection, this);
+            this.signUpWindow.SetUserManagers(userManager, menuBar, databaseConnection, this);
             this.userMenu.SetUserControls(menuBar, userManager, this);
             this.profile.SetUserControls(this);
             this.settings.SetUserControls(this);
@@ -52,10 +52,9 @@ namespace FilmLibraryWPF
             userControls.Add(profile);
             userControls.Add(userMenu);
             userControls.Add(movieDisplay);
-            movies = databaseConnection.GetMovies();
         }
 
-        public void CurrentUser()
+        public void SetCurrentUser()
         {
             currentUser = userManager.CurrentUser();
             if (currentUser != null)

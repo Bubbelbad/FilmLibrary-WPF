@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace FilmLibraryWPF
 {
-     class DatabaseConnection
+    public class DatabaseConnection
     {
         string server = "localhost";
-        string database = "Filmlibrary";
-        string username = "admin";
-        string password = "admin";
+        string database = "FilmLibrary";
+        string username = "user";
+        string password = "password";
 
         string connectionString = "";
 
@@ -46,13 +46,40 @@ namespace FilmLibraryWPF
             string query = "SELECT * FROM movie;";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read()) 
+            while (reader.Read())
             {
                 Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (int)reader["Runtime"], (int)reader["Rating"], (int)reader["Release_Year"]);
                 movies.Add(movie.Id, movie);
             }
             connection.Close();
             return movies;
+        }
+
+        public Dictionary<int, User> GetUsers()
+        {
+            Dictionary<int, User> users = new Dictionary<int, User>();
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            string query = "SELECT * FROM user;";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                User user = new User((int)reader["Id"], (string)reader["first_name"], (string)reader["last_name"], (string)reader["email"], (string)reader["password"],  (bool)reader["admin"]);
+                users.Add(user.Id, user);
+            }
+            connection.Close();
+            return users;
+        }
+
+        public void AddMovieToFavourites()
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.Open();
+            string query = "CALL add_movie_to_favourite;";
+            MySqlCommand command = new MySqlCommand( query, con);
+            int rowsAffected = command.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

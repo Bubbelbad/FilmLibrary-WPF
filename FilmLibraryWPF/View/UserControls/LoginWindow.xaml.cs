@@ -26,6 +26,7 @@ namespace FilmLibraryWPF.View.UserControls
         MenuBar menuBar;
         UserManager userManager;
         MainWindow mainWindow;
+        DatabaseConnection databaseConnection;
 
 
         public LoginWindow()
@@ -36,10 +37,11 @@ namespace FilmLibraryWPF.View.UserControls
         }
 
 
-        public void SetUserControls(MenuBar menuBar, UserManager userManager, MainWindow mainWindow)
+        public void SetUserControls(MenuBar menuBar, UserManager userManager, DatabaseConnection databaseConnection, MainWindow mainWindow)
         {
             this.menuBar = menuBar;
             this.userManager = userManager;
+            this.databaseConnection = databaseConnection;
             this.mainWindow = mainWindow;
         }
 
@@ -52,10 +54,11 @@ namespace FilmLibraryWPF.View.UserControls
             {
                 if (userManager.LogInUser(user, password))
                 {
+                    databaseConnection = userManager.VerifyIfAdmin();
                     mainWindow.LogInOrSignUpVisible(this);
                     tbEmail.txtInput.Text = "";
                     tbPassword.txtInput.Text = "";
-                    mainWindow.CurrentUser();
+                    mainWindow.SetCurrentUser();
                     menuBar.UpdateUserName();
                 }
                 else

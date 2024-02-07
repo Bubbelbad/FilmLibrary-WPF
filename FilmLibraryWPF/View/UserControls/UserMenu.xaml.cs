@@ -46,7 +46,7 @@ namespace FilmLibraryWPF.View.UserControls
         private void logOutBtn_Click(object sender, RoutedEventArgs e)
         {
             userManager.currentUser = null;
-            mainWindow.CurrentUser();
+            mainWindow.SetCurrentUser();
             mainWindow.menuBar.UpdateUserName();
             mainWindow.LogInOrSignUpVisible(mainWindow.logInWindow);
             mainWindow.profile.Visibility = Visibility.Hidden;
