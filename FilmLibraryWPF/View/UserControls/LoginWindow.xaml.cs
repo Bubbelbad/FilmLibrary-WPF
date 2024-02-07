@@ -54,10 +54,11 @@ namespace FilmLibraryWPF.View.UserControls
             {
                 if (userManager.LogInUser(user, password))
                 {
+                    databaseConnection = userManager.VerifyIfAdmin();
                     mainWindow.LogInOrSignUpVisible(this);
                     tbEmail.txtInput.Text = "";
                     tbPassword.txtInput.Text = "";
-                    mainWindow.CurrentUser();
+                    mainWindow.SetCurrentUser();
                     menuBar.UpdateUserName();
                 }
                 else

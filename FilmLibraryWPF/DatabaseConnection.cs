@@ -11,9 +11,9 @@ namespace FilmLibraryWPF
     public class DatabaseConnection
     {
         string server = "localhost";
-        string database = "Filmlibrary";
-        string username = "admin";
-        string password = "admin";
+        string database = "FilmLibrary";
+        string username = "user";
+        string password = "password";
 
         string connectionString = "";
 
@@ -58,7 +58,7 @@ namespace FilmLibraryWPF
         public Dictionary<int, User> GetUsers()
         {
             Dictionary<int, User> users = new Dictionary<int, User>();
-            MySqlConnection connection = new MySqlConnection();
+            MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string query = "SELECT * FROM user;";
             MySqlCommand command = new MySqlCommand(query, connection);

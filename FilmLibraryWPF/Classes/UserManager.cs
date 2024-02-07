@@ -13,17 +13,19 @@ namespace FilmLibraryWPF.Classes
     public class UserManager
     {
         DatabaseConnection databaseConnection;
+        Dictionary<int, User> userDictionary = new Dictionary<int, User>();
         List<User> listOfUsers = new List<User>();
         public User currentUser;
 
-        public static string usersPath = "users.txt";
-
+       // public static string usersPath = "users.txt";
+        
 
         public UserManager(DatabaseConnection databaseConnection)
         {
            // LoadListOfUsersFromFile();
             this.databaseConnection = databaseConnection;
-            databaseConnection.GetUsers();
+            userDictionary = databaseConnection.GetUsers();
+            listOfUsers = userDictionary.Values.ToList();
         }
 
 
@@ -59,14 +61,26 @@ namespace FilmLibraryWPF.Classes
             return false;
         }
 
-
-        public void SaveListOfUsersToJson()
+        public DatabaseConnection VerifyIfAdmin()
         {
-            string json = JsonConvert.SerializeObject(listOfUsers, Formatting.Indented);
-            StreamWriter sw = new StreamWriter(usersPath);
-            sw.WriteLine(json);
-            sw.Close();
+            if (currentUser.Admin == true)
+            {
+                return databaseConnection = new DatabaseConnection(true);
+            }
+            else
+            {
+                return databaseConnection;
+            }
         }
+
+
+       // public void SaveListOfUsersToJson()
+       // {
+       //     string json = JsonConvert.SerializeObject(listOfUsers, Formatting.Indented);
+       //     StreamWriter sw = new StreamWriter(usersPath);
+       //     sw.WriteLine(json);
+       //     sw.Close();
+       // }
 
 
        // public void LoadListOfUsersFromFile()

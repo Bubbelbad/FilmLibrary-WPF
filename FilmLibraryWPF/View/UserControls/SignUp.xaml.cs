@@ -53,7 +53,7 @@ namespace FilmLibraryWPF.View.UserControls
             {
               //  userManager.CreateUser(fullName, email, password);
                 mainWindow.LogInOrSignUpVisible(this);
-                userManager.SaveListOfUsersToJson();
+               // userManager.SaveListOfUsersToJson();
                 MessageBox.Show("Success!");
             }
         }
