@@ -1,23 +1,22 @@
 
 # Movie Library - WPF
 
-This application should let the user browse movies for inspiration. The user should be able to save the movies to different lists, like favorites and watch list.
+This application should let the user browse movies for inspiration. The user should be able to save the movies to different lists, like 'favorites' and 'watch later'.
 
-The user to be able to browse films without being logged in, but also to create an account for saving the films in lists etc. Maybe add comments too. 
-
-Now I don't know how to use API just yet, but I thought I'd lay the foundation of this app with users and login at least and add all the rest laters.  
-
-It might be that I change my goals when I know more, but this is the initial idea.
+First I thought I'd use API's to get the data, but since I need to practice MySQL and database connection I am changing the program to use that instead.
+It might be that I change my goals when I know more, but this is the idea!
 
 ## Features so far
-- Log In window and Sing up window that works on a basic level
-- Blur effect on menu to focus login and sign up screen
-- Menu for logged in user with suiting icons
+- Log In window and Sign up window that allows a user to log in (with a nice background blur effect)
+- When you log in, you get either admin privileges or ordinary user privilege to edit database
+- Menu for logged in user where you select your view
+- Importing users and movies from the database
 
 ## Features that are yet to be
 
 - Saving the movie-objects in different lists (watch later, favourites etc.)
-- Getting data from API's
+- Getting and storing the data in SQL
+- Sorting the movies in various ways (lenght, category, etc.)
 - Scrollable feed for displaying movies in different categorys
 
 
