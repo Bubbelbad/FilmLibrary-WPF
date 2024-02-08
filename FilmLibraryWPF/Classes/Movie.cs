@@ -17,6 +17,8 @@ namespace FilmLibraryWPF.Classes
 
         public static int nextId = 1;
 
+        List<string> movieCategorys = new List<string>();
+
         public Movie(int id, string title, string description, int runtime, int rating, int releaseYear)
         {
             this.Id = id;

@@ -8,7 +8,7 @@
     xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
     d:DesignHeight="600"
     d:DesignWidth="400"
-    Visibility="Hidden"
+    Visibility="Visible"
     mc:Ignorable="d">
 
 

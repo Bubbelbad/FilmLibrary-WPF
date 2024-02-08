@@ -72,6 +72,17 @@ namespace FilmLibraryWPF
             return users;
         }
 
+        public void CreateNewUser(string firstName, string lastName, string email, string password)
+        {
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            string query = "INSERT INTO user VALUES (DEFAULT, " + 
+                           "\"" + firstName + "\", \"" + lastName + "\", \"" + email + "\", \"" + password + "\", false);";
+            MySqlCommand command = new MySqlCommand(query, con);
+            int rowsAffected = command.ExecuteNonQuery();
+            con.Close();
+        }
+
         public void AddMovieToFavourites()
         {
             MySqlConnection con = new MySqlConnection();

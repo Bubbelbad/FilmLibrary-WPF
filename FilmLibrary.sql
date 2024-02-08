@@ -34,6 +34,21 @@ CREATE TABLE movie(
     release_year INT
 );
 
+DROP TABLE IF EXISTS category;
+CREATE TABLE category(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45)
+);
+
+DROP TABLE IF EXISTS movie_has_category;
+CREATE TABLE movie_has_category(
+	movie_id INT,
+    category_id INT,
+    FOREIGN KEY (movie_id) REFERENCES movie(id),
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
+    
+
 INSERT INTO user VALUES (DEFAULT, "admin", "adminsson", "admin", "admin", true),
 						(DEFAULT, "user", "Svensson", "user", "user", false),
 						(DEFAULT, "Bengan", "Bengtsson", "bengan.bengtsson@example.se", "1234", false),

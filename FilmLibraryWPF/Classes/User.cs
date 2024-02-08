@@ -23,6 +23,16 @@ namespace FilmLibraryWPF.Classes
 
         public static int nextId = 1;
 
+        public User(string fullName, string lastName, string email, string password)
+        {
+            this.Id = -1;
+            this.FullName = fullName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Password = password;
+            this.Admin = false;
+        }
+
         public User(int id, string fullName, string lastName, string email, string password, bool admin)
         {
             this.Id = id;

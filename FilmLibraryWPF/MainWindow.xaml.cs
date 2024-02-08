@@ -24,9 +24,10 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        //- Se till så att SignInWindow kan öppnas i MainWindow från MenuBar
-        //- Gör så storleken anpassas efter skärmstorlek vid uppstart!
-        //- Koppla inlogg till användare
+        // - Fixa en ClearablePasswordBox-klass till lösenord för inlogg och sign up
+        // - Implementera GetMovies() och visualisera dem i fälten
+        // - 
+        // - Gör så storleken anpassas efter skärmstorlek vid uppstart
 
         UserManager userManager;
         DatabaseConnection databaseConnection = new DatabaseConnection();
