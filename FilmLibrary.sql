@@ -10,7 +10,7 @@ TO 'admin'@'localhost';
 
 DROP USER IF EXISTS 'user'@'localhost';
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
-GRANT SELECT, UPDATE
+GRANT SELECT, UPDATE, INSERT
 ON FilmLibrary.*
 TO 'user'@'localhost';
 
@@ -84,3 +84,4 @@ INSERT INTO movie VALUES (DEFAULT, "Poor Things", "Wildly imaginative and exhila
 					     (DEFAULT, "Dumb Money", "Comedy now available on Netflix.", NULL, NULL, NULL),
 					     (DEFAULT, "Godzilla Minus One", "Black-and-white edition release of the classic monster film.", NULL, NULL, NULL);
     
+SELECT * FROM user;

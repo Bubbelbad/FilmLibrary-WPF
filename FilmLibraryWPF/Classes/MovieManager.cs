@@ -8,14 +8,19 @@ using System.Threading.Tasks;
 
 namespace FilmLibraryWPF.Classes
 {
-    class MovieManager
+    public class MovieManager
     {
         List<Movie> movies = new List<Movie>();
 
-       // public void AddMovie(string title, string description, string imagePath)
-       // {
-       //     movies.Add(new Classes.Movie(title, description, imagePath));
-       // }
+        public MovieManager(List<Movie> movies)
+        {
+            this.movies = movies;
+        }
+
+        // public void AddMovie(string title, string description, string imagePath)
+        // {
+        //     movies.Add(new Classes.Movie(title, description, imagePath));
+        // }
 
 
         public List<Movie> SearchMovie(string title)

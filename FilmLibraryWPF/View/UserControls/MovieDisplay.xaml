@@ -8,7 +8,7 @@
     xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
     d:DesignHeight="1500"
     d:DesignWidth="1200"
-    Visibility="Hidden"
+    Visibility="Visible"
     mc:Ignorable="d">
 
     <Grid>
@@ -29,7 +29,6 @@
                     Panel.ZIndex="1" 
                     />
                     
-
                 <userControls:Movie
                     x:Name="Movie2"
                     Grid.Row="0"

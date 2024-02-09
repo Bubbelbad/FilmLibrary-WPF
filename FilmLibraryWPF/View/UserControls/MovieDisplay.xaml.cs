@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmLibraryWPF.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,15 +22,44 @@ namespace FilmLibraryWPF.View.UserControls
     public partial class MovieDisplay : UserControl
     {
         MainWindow mainWindow;
+        MovieManager movieManager;
+
+        List<UserControls.Movie> moviesUsc = new List<UserControls.Movie>();
+        List <Classes.Movie> movies = new List<Classes.Movie>();
+        
 
         public MovieDisplay()
         {
             InitializeComponent();
+            moviesUsc.Add(Movie1);
+            moviesUsc.Add(Movie2);
+            moviesUsc.Add(Movie3);
+            moviesUsc.Add(Movie4);
+            moviesUsc.Add(Movie5);
+            moviesUsc.Add(Movie6);
+            moviesUsc.Add(Movie7);
+            moviesUsc.Add(Movie8);
+            moviesUsc.Add(Movie9);
+            moviesUsc.Add(Movie10);
+            moviesUsc.Add(Movie11);
+            moviesUsc.Add(Movie12);
+            moviesUsc.Add(Movie14);
+            moviesUsc.Add(Movie15);
+            moviesUsc.Add(Movie16);
+            moviesUsc.Add(Movie17);
+            moviesUsc.Add(Movie18);
         }
 
-        public void SetUserControls(MainWindow mainWindow)
+        public void SetUserControls(MainWindow mainWindow, MovieManager movieManager)
         {
             this.mainWindow = mainWindow;
+            this.movieManager = movieManager;
+           // movies = movieManager.
+        }
+
+        public void ImportMovies()
+        {
+
         }
 
         private void Movie1_MouseEnter(object sender, MouseEventArgs e)
