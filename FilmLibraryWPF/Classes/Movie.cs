@@ -12,7 +12,7 @@ namespace FilmLibraryWPF.Classes
         public string Title { get; private set; }
         public string Description { get; set; }
         public int Runtime { get; set; }
-        public int rating { get; set; }
+        public int Rating { get; set; }
         public int ReleaseYear { get; set; }
 
         public static int nextId = 1;
@@ -25,7 +25,7 @@ namespace FilmLibraryWPF.Classes
             this.Title = title;
             this.Description = description;
             this.Runtime = runtime;
-            this.rating = rating;
+            this.Rating = rating;
             this.ReleaseYear = releaseYear;
         }
     }

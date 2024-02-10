@@ -45,6 +45,7 @@ namespace FilmLibraryWPF.View.UserControls
             moviesUsc.Add(Movie10);
             moviesUsc.Add(Movie11);
             moviesUsc.Add(Movie12);
+            moviesUsc.Add(Movie13);
             moviesUsc.Add(Movie14);
             moviesUsc.Add(Movie15);
             moviesUsc.Add(Movie16);
@@ -64,13 +65,14 @@ namespace FilmLibraryWPF.View.UserControls
 
         public void ImportMovies()
         {
-            foreach (Classes.Movie movie in listOfMovies)
+           
+            
+            for (int i = 0; i < 18; i++)
             {
-                for (int i = 0; i < 9; i++)
-                {
-                    moviesUsc[i].label_movieTitle.Content = listOfMovies[i].Title;
-                }
+                moviesUsc[i].label_movieTitle.Content = listOfMovies[i].Title;
+                moviesUsc[i].label_movieRating.Content = $"Rating: {listOfMovies[i].Rating}%";
             }
+            
         }
 
         private void Movie1_MouseEnter(object sender, MouseEventArgs e)

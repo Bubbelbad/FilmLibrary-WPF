@@ -41,7 +41,7 @@
             Grid.Row="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Content="Rating X X X X X"
+            Content="Rating: X%"
             FontSize="16"
             Foreground="White" />
     </Grid>
