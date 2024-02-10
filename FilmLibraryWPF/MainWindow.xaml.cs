@@ -32,6 +32,7 @@ namespace FilmLibraryWPF
         // - Gör så storleken anpassas efter skärmstorlek vid uppstart
 
         UserManager userManager;
+        MovieManager movieManager;
         DatabaseConnection databaseConnection = new DatabaseConnection();
         List<UserControl> userControls = new List<UserControl>();
         Dictionary<int, Classes.Movie> movieDict = new Dictionary<int, Classes.Movie>();
@@ -43,13 +44,14 @@ namespace FilmLibraryWPF
         {
             InitializeComponent();
             userManager = new UserManager(databaseConnection);
+            movieManager = new MovieManager();
             menuBar.SetMainWindow(this);
             this.logInWindow.SetUserControls(menuBar, userManager, databaseConnection, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar, databaseConnection, this);
             this.userMenu.SetUserControls(menuBar, userManager, this);
             this.profile.SetUserControls(this);
             this.settings.SetUserControls(this);
-            this.movieDisplay.SetUserControls(this);
+            this.movieDisplay.SetUserControls(this, movieManager, databaseConnection);
             userControls.Add(signUpWindow);
             userControls.Add(userMenu);
             userControls.Add(profile);

@@ -23,9 +23,11 @@ namespace FilmLibraryWPF.View.UserControls
     {
         MainWindow mainWindow;
         MovieManager movieManager;
+        DatabaseConnection databaseConnection;
 
         List<UserControls.Movie> moviesUsc = new List<UserControls.Movie>();
-        List <Classes.Movie> movies = new List<Classes.Movie>();
+        Dictionary<int, Classes.Movie> movieDictionary = new Dictionary<int, Classes.Movie>();
+        List<Classes.Movie> listOfMovies = new List<Classes.Movie>();
         
 
         public MovieDisplay()
@@ -50,16 +52,25 @@ namespace FilmLibraryWPF.View.UserControls
             moviesUsc.Add(Movie18);
         }
 
-        public void SetUserControls(MainWindow mainWindow, MovieManager movieManager)
+        public void SetUserControls(MainWindow mainWindow, MovieManager movieManager, DatabaseConnection databaseConnection)
         {
             this.mainWindow = mainWindow;
             this.movieManager = movieManager;
-           // movies = movieManager.
+            this.databaseConnection = databaseConnection;
+            movieDictionary = databaseConnection.GetMovies();
+            listOfMovies = movieDictionary.Values.ToList();
+            ImportMovies();
         }
 
         public void ImportMovies()
         {
-
+            foreach (Classes.Movie movie in listOfMovies)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    moviesUsc[i].label_movieTitle.Content = listOfMovies[i].Title;
+                }
+            }
         }
 
         private void Movie1_MouseEnter(object sender, MouseEventArgs e)
