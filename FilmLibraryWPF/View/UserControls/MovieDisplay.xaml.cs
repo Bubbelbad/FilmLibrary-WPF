@@ -65,14 +65,11 @@ namespace FilmLibraryWPF.View.UserControls
 
         public void ImportMovies()
         {
-           
-            
             for (int i = 0; i < 18; i++)
             {
                 moviesUsc[i].label_movieTitle.Content = listOfMovies[i].Title;
                 moviesUsc[i].label_movieRating.Content = $"Rating: {listOfMovies[i].Rating}%";
             }
-            
         }
 
         private void Movie1_MouseEnter(object sender, MouseEventArgs e)

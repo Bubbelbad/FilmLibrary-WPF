@@ -25,8 +25,6 @@ namespace FilmLibraryWPF
     public partial class MainWindow : Window
     {
 
-        // - Implementera GetMovies() och visualisera dem i fälten
-
         // - Separera Full Name till firstName och lastName i Sign upp, lägg även till "Do you already have an account?" och "Have you got an account?"
         // - Fixa en ClearablePasswordBox-klass till lösenord för inlogg och sign up
         // - Gör så storleken anpassas efter skärmstorlek vid uppstart
@@ -70,27 +68,28 @@ namespace FilmLibraryWPF
 
         public void LogInOrSignUpVisible(UserControl control)
         {
-            if (control.Visibility == Visibility.Hidden)
-            {
-                control.Visibility = Visibility.Visible;
-                menuBar.blurEffect.Radius = 5;
-                userMenu.Visibility = Visibility.Hidden;
-                if (control == signUpWindow)
-                {
-                    logInWindow.Visibility = Visibility.Hidden;
-                }
-                else
-                {
-                    signUpWindow.Visibility = Visibility.Hidden;
-                }
-            }
-            else
-            {
-                control.Visibility = Visibility.Hidden;
-                menuBar.blurEffect.Radius = 0;
-                userMenu.Visibility = Visibility.Hidden;
-            }
+             if (control.Visibility == Visibility.Hidden)
+             {
+                 control.Visibility = Visibility.Visible;
+                 menuBar.blurEffect.Radius = 5;
+                 userMenu.Visibility = Visibility.Hidden;
+                 if (control == signUpWindow)
+                 {
+                     logInWindow.Visibility = Visibility.Hidden;
+                 }
+                 else
+                 {
+                     signUpWindow.Visibility = Visibility.Hidden;
+                 }
+             }
+             else
+             {
+                 control.Visibility = Visibility.Hidden;
+                 menuBar.blurEffect.Radius = 0;
+                 userMenu.Visibility = Visibility.Hidden;
+             }
         }
+
 
         //Takes the userControl from UserMenu that should be visible as argument and hides the rest of the userControls
         public void MenuChoiceVisibility(UserControl control)

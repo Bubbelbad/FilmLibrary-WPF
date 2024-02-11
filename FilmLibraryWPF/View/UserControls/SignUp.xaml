@@ -8,7 +8,7 @@
     xmlns:userControls="clr-namespace:FilmLibraryWPF.View.UserControls"
     d:DesignHeight="550"
     d:DesignWidth="800"
-    Visibility="Hidden"
+    Visibility="Visible"
     mc:Ignorable="d">
 
     <Grid
@@ -25,6 +25,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="1.5*" />
         </Grid.RowDefinitions>
         <Button
             x:Name="btnClose"
@@ -34,20 +35,18 @@
             VerticalAlignment="Top"
             Background="Transparent"
             BorderThickness="0"
+            Click="btnClose_Click"
             Content="X"
             Foreground="LightGray"
-            TabIndex="-1" 
-            Click="btnClose_Click"/>
+            TabIndex="-1" />
 
         <TextBlock
             Grid.Row="0"
-            Width="250"
-            Height="30"
-            Margin="25,20,0,10"
-            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
             FontSize="20"
             Foreground="White"
-            Text="Sign up - Movie Library" />
+            Text="Sign up" />
         <TextBlock
             Grid.Row="1"
             Width="250"
@@ -56,7 +55,7 @@
             VerticalAlignment="Bottom"
             FontSize="16"
             Foreground="White"
-            Text="Full name" />
+            Text="First name" />
         <TextBlock
             Grid.Row="3"
             Width="250"
@@ -65,7 +64,7 @@
             VerticalAlignment="Bottom"
             FontSize="16"
             Foreground="White"
-            Text="Email" />
+            Text="Last name" />
         <TextBlock
             Grid.Row="5"
             Width="250"
@@ -74,8 +73,16 @@
             VerticalAlignment="Bottom"
             FontSize="16"
             Foreground="White"
+            Text="Email" />
+        <TextBlock
+            Grid.Row="7"
+            Width="250"
+            Height="30"
+            Margin="5,10,10,0"
+            VerticalAlignment="Bottom"
+            FontSize="16"
+            Foreground="White"
             Text="Password" />
-
         <userControls:ClearableTextBox
             x:Name="tbFullName"
             Grid.Row="2"
@@ -85,7 +92,7 @@
             VerticalAlignment="Top"
             TabIndex="0" />
         <userControls:ClearableTextBox
-            x:Name="tbEmail"
+            x:Name="tbLastName"
             Grid.Row="4"
             Width="250"
             Height="30"
@@ -93,28 +100,25 @@
             VerticalAlignment="Top"
             TabIndex="1" />
         <userControls:ClearableTextBox
-            x:Name="tbPassword"
+            x:Name="tbEmail"
             Grid.Row="6"
             Width="250"
             Height="30"
             Margin="5,0,10,10"
             VerticalAlignment="Top"
+            TabIndex="1" />
+        <userControls:ClearableTextBox
+            x:Name="tbPassword"
+            Grid.Row="8"
+            Width="250"
+            Height="30"
+            Margin="5,0,10,10"
+            VerticalAlignment="Top"
             TabIndex="2" />
-        <CheckBox
-            x:Name="stayLoggedInCheckBox"
-            Grid.Row="7"
-            Margin="20,11,5,5"
-            VerticalAlignment="Top"
-            TabIndex="3" />
-        <Label
-            Grid.Row="7"
-            Margin="35,5,5,5"
-            VerticalAlignment="Top"
-            Content="Remember me on this device"
-            Foreground="White" />
+        
         <Button
             x:Name="btnSignUpDone"
-            Grid.Row="9"
+            Grid.Row="10"
             Width="175"
             Height="30"
             Margin="5,10,10,20"

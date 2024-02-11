@@ -29,7 +29,8 @@ namespace FilmLibraryWPF.View.UserControls
         public SignUp()
         {
             InitializeComponent();
-            tbFullName.ChangeText("Full name");
+            tbFullName.ChangeText("First name");
+            tbLastName.ChangeText("Last name");
             tbEmail.ChangeText("Email");
             tbPassword.ChangeText("Password");
         }
@@ -45,15 +46,15 @@ namespace FilmLibraryWPF.View.UserControls
 
         private void btnSignUpDone_Click(object sender, RoutedEventArgs e)
         {
-            string fullName = tbFullName.txtInput.Text;
+            string firstName = tbFullName.txtInput.Text;
+            string lastName = tbLastName.txtInput.Text;
             string email = tbEmail.txtInput.Text;
             string password = tbPassword.txtInput.Text;
 
             if (CheckEmail(email))
             {
-                userManager.CreateUser(fullName, fullName, email, password);
+                userManager.CreateUser(firstName, lastName, email, password);
                 mainWindow.LogInOrSignUpVisible(this);
-               // userManager.SaveListOfUsersToJson();
                 MessageBox.Show("Success!");
             }
         }
@@ -77,6 +78,11 @@ namespace FilmLibraryWPF.View.UserControls
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.LogInOrSignUpVisible(this);
+        }
+
+        private void btnGoToLogin_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
