@@ -24,7 +24,7 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        // - Använd krypterings-package för lösenorden till SQL.
         // - Separera Full Name till firstName och lastName i Sign upp, lägg även till "Do you already have an account?" och "Have you got an account?"
         // - Fixa en ClearablePasswordBox-klass till lösenord för inlogg och sign up
         // - Gör så storleken anpassas efter skärmstorlek vid uppstart
@@ -43,7 +43,7 @@ namespace FilmLibraryWPF
             InitializeComponent();
             userManager = new UserManager(databaseConnection);
             movieManager = new MovieManager();
-            menuBar.SetMainWindow(this);
+            menuBar.SetClasses(this, movieDisplay);
             this.logInWindow.SetUserControls(menuBar, userManager, databaseConnection, this);
             this.signUpWindow.SetUserManagers(userManager, menuBar, databaseConnection, this);
             this.userMenu.SetUserControls(menuBar, userManager, this);

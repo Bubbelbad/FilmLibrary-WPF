@@ -25,13 +25,11 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
-
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             txtInput.Clear(); 
             txtInput.Focus();
         }
-
 
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -45,7 +43,6 @@ namespace FilmLibraryWPF.View.UserControls
                 txtInput.Foreground = Brushes.White;
             }
         }
-
 
         //Here I implement a function that lets other classes change what I want to display.
         public void ChangeText(string newText)

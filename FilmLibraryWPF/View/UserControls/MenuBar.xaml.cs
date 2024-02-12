@@ -24,6 +24,7 @@ namespace FilmLibraryWPF.View.UserControls
     public partial class MenuBar : UserControl
     {
         MainWindow mainWindow;
+        MovieDisplay movieDisplay;
 
         public MenuBar()
         {
@@ -48,9 +49,10 @@ namespace FilmLibraryWPF.View.UserControls
             }
         }
 
-        public void SetMainWindow(MainWindow mainWindow1)
+        public void SetClasses(MainWindow mainWindow1, MovieDisplay movieDisplay)
         {
             this.mainWindow = mainWindow1;
+            this.movieDisplay = movieDisplay;
         }
 
         //Exit
@@ -97,6 +99,14 @@ namespace FilmLibraryWPF.View.UserControls
             else
             {
                 mainWindow.userMenu.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void tbBrowsMovies_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                movieDisplay.SearchMovies(tbBrowsMovies.txtInput.Text);
             }
         }
     }

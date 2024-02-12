@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace FilmLibraryWPF.View.UserControls
 {
@@ -28,6 +29,7 @@ namespace FilmLibraryWPF.View.UserControls
         List<UserControls.Movie> moviesUsc = new List<UserControls.Movie>();
         Dictionary<int, Classes.Movie> movieDictionary = new Dictionary<int, Classes.Movie>();
         List<Classes.Movie> listOfMovies = new List<Classes.Movie>();
+
         
 
         public MovieDisplay()
@@ -76,6 +78,29 @@ namespace FilmLibraryWPF.View.UserControls
         {
             Movie1.Height += 10;
             Movie1.Width += 10;
+        }
+
+        public void SearchMovies(string search)
+        {
+            int iterator = 0;
+            for (int i = 0; i <  listOfMovies.Count; i++)
+            {
+                if (listOfMovies[i].Title.Contains(search))
+                {
+                    moviesUsc[iterator].Visibility = Visibility.Visible;
+                    moviesUsc[iterator].label_movieTitle.Content = listOfMovies[i].Title;
+                    moviesUsc[iterator].label_movieRating.Content = $"Rating: {listOfMovies[i].Rating}%";
+                    iterator++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            for (int i = iterator; i < 18; i++)
+            {
+                moviesUsc[i].Visibility = Visibility.Hidden;
+            }
         }
     }
 }
