@@ -15,7 +15,10 @@
                    Panel.ZIndex="-1"/>
         <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X" 
                 Background="Transparent" Foreground="LightGray" BorderThickness="0"
-                Click="btnClear_Click" TabIndex="-1"/>
+                Click="btnClear_Click" TabIndex="-1"
+                />
+        
+
 
     </Grid>
 </UserControl>

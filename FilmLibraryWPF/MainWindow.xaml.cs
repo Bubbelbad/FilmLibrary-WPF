@@ -24,8 +24,8 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        // - Fixa bilder till Filmerna i något bra mått. 
         // - Använd krypterings-package för lösenorden till SQL.
-        // - Separera Full Name till firstName och lastName i Sign upp, lägg även till "Do you already have an account?" och "Have you got an account?"
         // - Fixa en ClearablePasswordBox-klass till lösenord för inlogg och sign up
         // - Gör så storleken anpassas efter skärmstorlek vid uppstart
 

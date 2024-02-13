@@ -30,8 +30,6 @@ namespace FilmLibraryWPF.View.UserControls
         Dictionary<int, Classes.Movie> movieDictionary = new Dictionary<int, Classes.Movie>();
         List<Classes.Movie> listOfMovies = new List<Classes.Movie>();
 
-        
-
         public MovieDisplay()
         {
             InitializeComponent();
@@ -71,15 +69,18 @@ namespace FilmLibraryWPF.View.UserControls
             {
                 moviesUsc[i].label_movieTitle.Content = listOfMovies[i].Title;
                 moviesUsc[i].label_movieRating.Content = $"Rating: {listOfMovies[i].Rating}%";
+                //moviesUsc[i].
             }
         }
 
+        //This method is supposed to enlarge the object, but is isn't working properly. 
         private void Movie1_MouseEnter(object sender, MouseEventArgs e)
         {
             Movie1.Height += 10;
             Movie1.Width += 10;
         }
 
+        //This method is not optimal since it is not case-sensitive! Need to find another way.
         public void SearchMovies(string search)
         {
             int iterator = 0;

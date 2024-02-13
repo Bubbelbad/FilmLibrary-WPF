@@ -13,6 +13,7 @@
     <None Remove="Images\SplashScreen.png" />
     <None Remove="SplashScreen.png" />
     <None Remove="View\UserControls\blueBackground.jpg" />
+    <None Remove="View\UserControls\thebeekeeper.jpg" />
     <None Remove="View\UserControls\userIcon.png" />
   </ItemGroup>
 
@@ -26,6 +27,7 @@
     <Resource Include="blueBackground.jpg" />
     <Resource Include="SplashScreen.png" />
     <Resource Include="View\UserControls\blueBackground.jpg" />
+    <Resource Include="View\UserControls\thebeekeeper.jpg" />
     <Resource Include="View\UserControls\userIcon.png" />
   </ItemGroup>
 

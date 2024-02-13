@@ -25,9 +25,9 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
-        private void button_movie_MouseEnter(object sender, MouseEventArgs e)
-        {
-            
-        }
+       // private void SetMoviePoster()
+       // {
+       //     this.moviePoster.Source =  
+       // }
     }
 }

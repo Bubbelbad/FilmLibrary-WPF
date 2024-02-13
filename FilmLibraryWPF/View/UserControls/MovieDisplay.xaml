@@ -20,16 +20,16 @@
                 VerticalAlignment="Top"
                 Orientation="Horizontal">
                 <!--  Movies 1  -->
-                <userControls:Movie
+                    <userControls:Movie
                     x:Name="Movie1"
                     Grid.Row="0"
                     Width="200"
                     Height="300"
                     HorizontalAlignment="Left"
-                    Panel.ZIndex="1" 
+                    Panel.ZIndex="1"
                     />
-                    
-                <userControls:Movie
+
+                    <userControls:Movie
                     x:Name="Movie2"
                     Grid.Row="0"
                     Width="200"
