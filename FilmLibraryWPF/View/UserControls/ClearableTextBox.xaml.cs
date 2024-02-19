@@ -31,6 +31,15 @@ namespace FilmLibraryWPF.View.UserControls
             txtInput.Focus();
         }
 
+        private void ChangeToPassWordBox()
+        {
+            if (tbPlaceHolder.Text == "Password")
+            {
+                txtInput.Visibility = Visibility.Hidden;
+                passwordBox.Visibility = Visibility.Visible;
+            }
+        }
+
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrEmpty(txtInput.Text))
@@ -48,6 +57,21 @@ namespace FilmLibraryWPF.View.UserControls
         public void ChangeText(string newText)
         {
             tbPlaceHolder.Text = newText;
+            ChangeToPassWordBox();
+        }
+
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(passwordBox.Password))
+            {
+                tbPlaceHolder.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                tbPlaceHolder.Visibility = Visibility.Hidden;
+                txtInput.Foreground = Brushes.White;
+            }
+
         }
     }
 }

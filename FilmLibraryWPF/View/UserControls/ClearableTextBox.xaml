@@ -9,7 +9,12 @@
     <Grid>
         <TextBox x:Name="txtInput" VerticalAlignment="Center" BorderThickness="2" 
                    FontSize="16" FontWeight="Light" Background="Transparent" 
-                 TextChanged="txtInput_TextChanged" />
+                 TextChanged="txtInput_TextChanged" Visibility="Visible"/>
+        
+        <PasswordBox x:Name="passwordBox" VerticalAlignment="Center" BorderThickness="2" 
+                   FontSize="16" FontWeight="Light" Background="Transparent"
+                   Foreground="White" Visibility="Hidden" PasswordChanged="passwordBox_PasswordChanged"/>
+        
         <TextBlock x:Name="tbPlaceHolder" Text="Browse movies or series" FontSize="16" FontWeight="Light"
                    Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0" 
                    Panel.ZIndex="-1"/>

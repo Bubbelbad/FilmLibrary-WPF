@@ -24,9 +24,12 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        // - Fixa bilder till Filmerna i något bra mått. 
-        // - Använd krypterings-package för lösenorden till SQL.
+        // - Fixa bilder till Filmerna i något bra mått (ta från dopebox så alla blir samma size) 
+        // - Använd krypterings-package för lösenorden till SQL ? 
         // - Fixa en ClearablePasswordBox-klass till lösenord för inlogg och sign up
+        // - Gör någon form av highlight när man har mouseEnter på filmerna i menyn
+        // - Fixa en funktion så användare kan spara filmerna till sin favoritlista.
+        // - Dela in filmerna i några kategorier
         // - Gör så storleken anpassas efter skärmstorlek vid uppstart
 
         UserManager userManager;

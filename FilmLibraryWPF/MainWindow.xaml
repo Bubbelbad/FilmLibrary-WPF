@@ -26,6 +26,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+        
         <!--  Menu bar  -->
         <userControls:MenuBar x:Name="menuBar" />
 
