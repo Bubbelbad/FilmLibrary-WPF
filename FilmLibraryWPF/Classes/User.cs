@@ -52,7 +52,7 @@ namespace FilmLibraryWPF.Classes
 
         public bool LogIn(string email, string password)
         {
-            if (email == null || password == null)
+            if (email == null || password == null || email == "" || password == "")
             {
                 return false;
             }

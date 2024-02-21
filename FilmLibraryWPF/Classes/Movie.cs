@@ -14,12 +14,13 @@ namespace FilmLibraryWPF.Classes
         public int Runtime { get; set; }
         public int Rating { get; set; }
         public int ReleaseYear { get; set; }
+        public string MoviePoster {  get; set; }
 
         public static int nextId = 1;
 
         List<string> movieCategorys = new List<string>();
 
-        public Movie(int id, string title, string description, int runtime, int rating, int releaseYear)
+        public Movie(int id, string title, string description, int runtime, int rating, int releaseYear, string moviePoster)
         {
             this.Id = id;
             this.Title = title;
@@ -27,6 +28,7 @@ namespace FilmLibraryWPF.Classes
             this.Runtime = runtime;
             this.Rating = rating;
             this.ReleaseYear = releaseYear;
+            this.MoviePoster = moviePoster;
         }
     }
 }

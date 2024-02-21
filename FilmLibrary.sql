@@ -31,7 +31,8 @@ CREATE TABLE movie(
     description VARCHAR(2500),
     runtime INT,
     rating INT,
-    release_year INT
+    release_year INT,
+    movie_poster VARCHAR(45)
 );
 
 DROP TABLE IF EXISTS category;
@@ -71,23 +72,23 @@ INSERT INTO user VALUES (DEFAULT, "admin", "adminsson", "admin", "admin", true),
 						(DEFAULT, "Ray N.", "Carnation", "ray.n.carnation.@example.com", "1234", false);
 
 
-INSERT INTO movie VALUES (DEFAULT, "Poor Things", "Wildly imaginative and exhilaratingly over the top, Poor Things is a bizarre, brilliant tour de force for director Yorgos Lanthimos and star Emma Stone.", 141, 93, 2023), 
-					     (DEFAULT, "Anatomy of a Fall", "A smart, solidly crafted procedural that's anchored in family drama, Anatomy of a Fall finds star Sandra Hüller and director/co-writer Justine Triet operating at peak power.", 131, 96, 2023),
-					     (DEFAULT, "The Kitchen", "Smart sci-fi that's solidly grounded in social commentary, The Kitchen suggests a bright future for the directing duo of Daniel Kaluuya and Kibwe Tavares.", 88, 77, 2023),
-					     (DEFAULT, "Saltburn", "Emerald Fennell's candy-coated and incisive Saltburn is a debauched jolt to the senses that will be invigorating for most.", 131, 71, 2023),
-					     (DEFAULT, "The Beekeeper", "Cheerfully undemanding and enjoyably retrograde, The Beekeeper proves that when it comes to dispensing action-thriller justice, Statham hasn't lost his sting.", 133, 69, 2024),
-					     (DEFAULT, "Road House", "Action-packed thriller with a runtime of 112 minutes.", 112, 71, 2024),
-					     (DEFAULT, "Mean Girls", "Teen comedy with a runtime of 112 minutes.", 112, 63, 2024),
-					     (DEFAULT, "Killers of the Flower Moon", "Epic crime drama spanning 206 minutes.", 206, 77, 2023),
-					     (DEFAULT, "The Holdovers", "Engaging mystery film lasting 133 minutes.", 133, 80, 2023),
-                         (DEFAULT, "The Midnight Library", "A captivating exploration of life's choices and regrets, The Midnight Library combines heartwarming moments with philosophical depth.", 120, 82, 2023),
-					     (DEFAULT, "The Forgotten City", "A gripping mystery set in an ancient Roman city, The Forgotten City weaves time-travel elements with moral dilemmas.", 135, 79, 2024),
-					     (DEFAULT, "The Starling", "A poignant dramedy about grief, resilience, and unexpected connections, The Starling features Melissa McCarthy in a standout performance.", 98, 75, 2023),
-					     (DEFAULT, "The Lost City", "An action-adventure comedy with Sandra Bullock and Channing Tatum, The Lost City promises laughs, romance, and jungle escapades.", 118, 68, 2024),
-					     (DEFAULT, "The Velvet Underground", "A documentary exploring the influential rock band's rise and impact, The Velvet Underground is a must-watch for music enthusiasts.", 110, 80, 2023),
-					     (DEFAULT, "The Last Duel", "A historical drama with Ridley Scott at the helm, The Last Duel delves into betrayal, honor, and a high-stakes duel in medieval France.", 152, 76, 2023),
-					     (DEFAULT, "The French Dispatch", "Wes Anderson's visually stunning anthology film, The French Dispatch celebrates journalism, art, and quirky storytelling.", 108, 79, 2023),
-					     (DEFAULT, "The Northman", "A Viking revenge saga directed by Robert Eggers, The Northman promises brutal battles and atmospheric cinematography.", 140, 78, 2024),
-					     (DEFAULT, "The Electric Life of Louis Wain", "Benedict Cumberbatch stars in this biographical drama about the eccentric artist Louis Wain, known for his whimsical cat illustrations.", 111, 73, 2023);
+INSERT INTO movie VALUES (DEFAULT, "Poor Things", "Wildly imaginative and exhilaratingly over the top, Poor Things is a bizarre, brilliant tour de force for director Yorgos Lanthimos and star Emma Stone.", 141, 93, 2023, "poorthings"), 
+					     (DEFAULT, "Anatomy of a Fall", "A smart, solidly crafted procedural that's anchored in family drama, Anatomy of a Fall finds star Sandra Hüller and director/co-writer Justine Triet operating at peak power.", 131, 96, 2023, "thekitchen"),
+					     (DEFAULT, "The Kitchen", "Smart sci-fi that's solidly grounded in social commentary, The Kitchen suggests a bright future for the directing duo of Daniel Kaluuya and Kibwe Tavares.", 88, 77, 2023, "thekitchen"),
+					     (DEFAULT, "Saltburn", "Emerald Fennell's candy-coated and incisive Saltburn is a debauched jolt to the senses that will be invigorating for most.", 131, 71, 2023, "saltburn"),
+					     (DEFAULT, "The Beekeeper", "Cheerfully undemanding and enjoyably retrograde, The Beekeeper proves that when it comes to dispensing action-thriller justice, Statham hasn't lost his sting.", 133, 69, 2024, "thekitchen"),
+					     (DEFAULT, "Road House", "Action-packed thriller with a runtime of 112 minutes.", 112, 71, 2024, "thekitchen"),
+					     (DEFAULT, "Mean Girls", "Teen comedy with a runtime of 112 minutes.", 112, 63, 2024, "thekitchen"),
+					     (DEFAULT, "Killers of the Flower Moon", "Epic crime drama spanning 206 minutes.", 206, 77, 2023, "thekitchen"),
+					     (DEFAULT, "The Holdovers", "Engaging mystery film lasting 133 minutes.", 133, 80, 2023, "thekitchen"),
+                         (DEFAULT, "The Midnight Library", "A captivating exploration of life's choices and regrets, The Midnight Library combines heartwarming moments with philosophical depth.", 120, 82, 2023, "thekitchen"),
+					     (DEFAULT, "The Forgotten City", "A gripping mystery set in an ancient Roman city, The Forgotten City weaves time-travel elements with moral dilemmas.", 135, 79, 2024, "thekitchen"),
+					     (DEFAULT, "The Starling", "A poignant dramedy about grief, resilience, and unexpected connections, The Starling features Melissa McCarthy in a standout performance.", 98, 75, 2023, "thekitchen"),
+					     (DEFAULT, "The Lost City", "An action-adventure comedy with Sandra Bullock and Channing Tatum, The Lost City promises laughs, romance, and jungle escapades.", 118, 68, 2024, "thekitchen"),
+					     (DEFAULT, "The Velvet Underground", "A documentary exploring the influential rock band's rise and impact, The Velvet Underground is a must-watch for music enthusiasts.", 110, 80, 2023, "thekitchen"),
+					     (DEFAULT, "The Last Duel", "A historical drama with Ridley Scott at the helm, The Last Duel delves into betrayal, honor, and a high-stakes duel in medieval France.", 152, 76, 2023, "thekitchen"),
+					     (DEFAULT, "The French Dispatch", "Wes Anderson's visually stunning anthology film, The French Dispatch celebrates journalism, art, and quirky storytelling.", 108, 79, 2023, "thekitchen"),
+					     (DEFAULT, "The Northman", "A Viking revenge saga directed by Robert Eggers, The Northman promises brutal battles and atmospheric cinematography.", 140, 78, 2024, "thekitchen"),
+					     (DEFAULT, "The Electric Life of Louis Wain", "Benedict Cumberbatch stars in this biographical drama about the eccentric artist Louis Wain, known for his whimsical cat illustrations.", 111, 73, 2023, "thekitchen");
     
-SELECT * FROM user;
+SELECT * FROM user;SELECT * FROM movie;

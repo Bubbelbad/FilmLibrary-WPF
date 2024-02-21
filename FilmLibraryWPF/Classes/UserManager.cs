@@ -47,9 +47,8 @@ namespace FilmLibraryWPF.Classes
             User theOne;
             foreach(User user in listOfUsers)
             {
-                if (user.GetName() == username)
+                if (user.GetName() == username && user.LogIn(username, password))
                 {
-                    user.LogIn(username, password);
                     currentUser = user;
                     return true;
                 }

@@ -29,8 +29,11 @@ namespace FilmLibraryWPF.View.UserControls
         {
             txtInput.Clear(); 
             txtInput.Focus();
+            passwordBox.Clear();
+            passwordBox.Focus();
         }
 
+        //Makes passwordbox visible where the descripive text is "Password", to hide password. 
         private void ChangeToPassWordBox()
         {
             if (tbPlaceHolder.Text == "Password")
@@ -40,6 +43,7 @@ namespace FilmLibraryWPF.View.UserControls
             }
         }
 
+        //Removes descriptive text when user starts to write in textbox
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrEmpty(txtInput.Text))
@@ -53,13 +57,14 @@ namespace FilmLibraryWPF.View.UserControls
             }
         }
 
-        //Here I implement a function that lets other classes change what I want to display.
+        //Changes the description to desired text
         public void ChangeText(string newText)
         {
             tbPlaceHolder.Text = newText;
             ChangeToPassWordBox();
         }
 
+        //Removes descriptive text when user starts to write in passwordbox
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(passwordBox.Password))
@@ -71,7 +76,6 @@ namespace FilmLibraryWPF.View.UserControls
                 tbPlaceHolder.Visibility = Visibility.Hidden;
                 txtInput.Foreground = Brushes.White;
             }
-
         }
     }
 }

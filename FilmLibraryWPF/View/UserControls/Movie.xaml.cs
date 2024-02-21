@@ -25,9 +25,6 @@ namespace FilmLibraryWPF.View.UserControls
             InitializeComponent();
         }
 
-       // private void SetMoviePoster()
-       // {
-       //     this.moviePoster.Source =  
-       // }
+        
     }
 }

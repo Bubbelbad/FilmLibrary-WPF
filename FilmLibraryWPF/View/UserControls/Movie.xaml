@@ -25,6 +25,11 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+
+        <Image x:Name="moviePoster" Grid.Row="0" Panel.ZIndex="2"
+               Visibility="Visible"
+               Source="/View/UserControls/thekitchen.png"
+               />
         <Button
                 x:Name="button_movie"
                 Grid.RowSpan="4"
@@ -33,7 +38,6 @@
                 BorderBrush="#FF2194F9"
                 Foreground="Transparent"
                 Template="{DynamicResource ButtonMovieTemplate}"/>
-        
         <Label
                 x:Name="label_movieTitle"
                 Grid.Row="1"

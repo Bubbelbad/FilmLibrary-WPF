@@ -49,7 +49,7 @@ namespace FilmLibraryWPF.View.UserControls
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string user = tbEmail.txtInput.Text;
-            string password = tbPassword.txtInput.Text;
+            string password = tbPassword.passwordBox.Password.ToString();
             try
             {
                 if (userManager.LogInUser(user, password))
@@ -58,13 +58,13 @@ namespace FilmLibraryWPF.View.UserControls
                     mainWindow.LogInOrSignUpVisible(this);
                     tbEmail.txtInput.Text = "";
                     tbPassword.txtInput.Text = "";
+                    tbPassword.passwordBox.Password = "";
                     mainWindow.SetCurrentUser();
                     menuBar.UpdateUserName();
                 }
                 else
                 {
-                    tbPassword.txtInput.Clear();
-                    tbEmail.txtInput.Clear();
+                    tbEmail.passwordBox.Password = "";
                     MessageBox.Show("Wrong credentials!");
                 }
             }

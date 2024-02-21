@@ -24,7 +24,8 @@ namespace FilmLibraryWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        // - Fixa bilder till Filmerna i något bra mått (ta från dopebox så alla blir samma size) 
+        // - Finish MovieDisplay moviePoster-function and add the URI's to the movies. 
+
         // - Använd krypterings-package för lösenorden till SQL ? 
         // - Fixa en ClearablePasswordBox-klass till lösenord för inlogg och sign up
         // - Gör någon form av highlight när man har mouseEnter på filmerna i menyn
@@ -69,6 +70,7 @@ namespace FilmLibraryWPF
             }
         }
 
+        //Function that blurs background and makes desired UserControl visible
         public void LogInOrSignUpVisible(UserControl control)
         {
              if (control.Visibility == Visibility.Hidden)

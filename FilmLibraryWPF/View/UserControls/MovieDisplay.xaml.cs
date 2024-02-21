@@ -29,6 +29,7 @@ namespace FilmLibraryWPF.View.UserControls
         List<UserControls.Movie> moviesUsc = new List<UserControls.Movie>();
         Dictionary<int, Classes.Movie> movieDictionary = new Dictionary<int, Classes.Movie>();
         List<Classes.Movie> listOfMovies = new List<Classes.Movie>();
+        
 
         public MovieDisplay()
         {
@@ -69,7 +70,11 @@ namespace FilmLibraryWPF.View.UserControls
             {
                 moviesUsc[i].label_movieTitle.Content = listOfMovies[i].Title;
                 moviesUsc[i].label_movieRating.Content = $"Rating: {listOfMovies[i].Rating}%";
-                //moviesUsc[i].
+                BitmapImage b1 = new BitmapImage();
+                b1.BeginInit();
+                b1.UriSource = new Uri($"/View/UserControls/{listOfMovies[i].MoviePoster}.png", UriKind.RelativeOrAbsolute);
+                b1.EndInit();
+                moviesUsc[i].moviePoster.Source = b1;
             }
         }
 

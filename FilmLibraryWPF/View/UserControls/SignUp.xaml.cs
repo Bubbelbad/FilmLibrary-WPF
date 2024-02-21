@@ -49,11 +49,15 @@ namespace FilmLibraryWPF.View.UserControls
             string firstName = tbFullName.txtInput.Text;
             string lastName = tbLastName.txtInput.Text;
             string email = tbEmail.txtInput.Text;
-            string password = tbPassword.txtInput.Text;
+            string password = tbPassword.passwordBox.Password;
 
             if (CheckEmail(email))
             {
                 userManager.CreateUser(firstName, lastName, email, password);
+                tbFullName.txtInput.Text = "";
+                tbLastName.txtInput.Text = "";
+                tbEmail.txtInput.Text = "";
+                tbPassword.passwordBox.Password = "";
                 mainWindow.LogInOrSignUpVisible(this);
                 MessageBox.Show("Success!");
             }

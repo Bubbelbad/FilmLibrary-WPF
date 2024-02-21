@@ -48,7 +48,7 @@ namespace FilmLibraryWPF
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (int)reader["Runtime"], (int)reader["Rating"], (int)reader["Release_Year"]);
+                Movie movie = new Movie((int)reader["Id"], (string)reader["Title"], (string)reader["Description"], (int)reader["Runtime"], (int)reader["Rating"], (int)reader["Release_Year"], (string)reader["movie_poster"]);
                 movies.Add(movie.Id, movie);
             }
             connection.Close();
