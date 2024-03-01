@@ -72,7 +72,7 @@ namespace FilmLibraryWPF.View.UserControls
                 moviesUsc[i].label_movieRating.Content = $"Rating: {listOfMovies[i].Rating}%";
                 BitmapImage b1 = new BitmapImage();
                 b1.BeginInit();
-                b1.UriSource = new Uri($"/View/UserControls/{listOfMovies[i].MoviePoster}.png", UriKind.RelativeOrAbsolute);
+                b1.UriSource = new Uri($"/Images/moviePosters/{listOfMovies[i].MoviePoster}.jpg", UriKind.RelativeOrAbsolute);
                 b1.EndInit();
                 moviesUsc[i].moviePoster.Source = b1;
             }

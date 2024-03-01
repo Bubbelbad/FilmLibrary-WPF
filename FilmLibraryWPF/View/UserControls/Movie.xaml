@@ -20,7 +20,7 @@
     <Grid x:Name="movieGrid" Margin="10,10,10,10" >
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*" />
+            <RowDefinition Height="7*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -29,6 +29,9 @@
         <Image x:Name="moviePoster" Grid.Row="0" Panel.ZIndex="2"
                Visibility="Visible"
                Source="/View/UserControls/thekitchen.png"
+               HorizontalAlignment="Left"
+               Margin="5,0"
+               
                />
         <Button
                 x:Name="button_movie"
@@ -41,7 +44,7 @@
         <Label
                 x:Name="label_movieTitle"
                 Grid.Row="1"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Content="Movie Title"
                 FontSize="16"
@@ -50,7 +53,7 @@
         <Label
                 x:Name="label_movieRating"
                 Grid.Row="2"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Content="Rating: X%"
                 FontSize="16"

@@ -10,11 +10,19 @@
   <ItemGroup>
     <None Remove="backgroundCamera.png" />
     <None Remove="blueBackground.jpg" />
+    <None Remove="Images\moviePosters\poorthings.jpg" />
+    <None Remove="Images\moviePosters\saltburn.jpg" />
+    <None Remove="Images\moviePosters\thekitchen.jpg" />
     <None Remove="Images\SplashScreen.png" />
     <None Remove="SplashScreen.png" />
     <None Remove="View\UserControls\blueBackground.jpg" />
-    <None Remove="View\UserControls\thebeekeeper.jpg" />
     <None Remove="View\UserControls\userIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\moviePosters\saltburn.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -25,9 +33,14 @@
   <ItemGroup>
     <Resource Include="backgroundCamera.png" />
     <Resource Include="blueBackground.jpg" />
+    <Resource Include="Images\moviePosters\poorthings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="SplashScreen.png" />
     <Resource Include="View\UserControls\blueBackground.jpg" />
-    <Resource Include="View\UserControls\thebeekeeper.jpg" />
+    <Content Include="Images\moviePosters\thekitchen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="View\UserControls\userIcon.png" />
   </ItemGroup>
 
