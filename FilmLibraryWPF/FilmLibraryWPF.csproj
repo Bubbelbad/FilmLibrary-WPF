@@ -10,9 +10,25 @@
   <ItemGroup>
     <None Remove="backgroundCamera.png" />
     <None Remove="blueBackground.jpg" />
+    <None Remove="Images\moviePosters\anatomyofafall.jpg" />
+    <None Remove="Images\moviePosters\killersoftheflowermoon.jpg" />
+    <None Remove="Images\moviePosters\mean girls.jpg" />
+    <None Remove="Images\moviePosters\meangirls.jpg" />
     <None Remove="Images\moviePosters\poorthings.jpg" />
+    <None Remove="Images\moviePosters\roadhouse.jpg" />
     <None Remove="Images\moviePosters\saltburn.jpg" />
+    <None Remove="Images\moviePosters\thebeekeeper.jpg" />
+    <None Remove="Images\moviePosters\theelectriclifeoflouiswain.jpg" />
+    <None Remove="Images\moviePosters\theforgottencity.jpg" />
+    <None Remove="Images\moviePosters\thefrenchdispatch.jpg" />
+    <None Remove="Images\moviePosters\theholdovers.jpg" />
     <None Remove="Images\moviePosters\thekitchen.jpg" />
+    <None Remove="Images\moviePosters\thelastduel.jpg" />
+    <None Remove="Images\moviePosters\thelostcity.jpg" />
+    <None Remove="Images\moviePosters\themidnightlibrary.jpg" />
+    <None Remove="Images\moviePosters\thenorthman.jpg" />
+    <None Remove="Images\moviePosters\thestarling.jpg" />
+    <None Remove="Images\moviePosters\thevelvetunderground.jpg" />
     <None Remove="Images\SplashScreen.png" />
     <None Remove="SplashScreen.png" />
     <None Remove="View\UserControls\blueBackground.jpg" />
@@ -38,7 +54,52 @@
     </Resource>
     <Resource Include="SplashScreen.png" />
     <Resource Include="View\UserControls\blueBackground.jpg" />
+    <Content Include="Images\moviePosters\anatomyofafall.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\killersoftheflowermoon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\meangirls.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\roadhouse.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thebeekeeper.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\theelectriclifeoflouiswain.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\theforgottencity.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thefrenchdispatch.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\theholdovers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\moviePosters\thekitchen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thelastduel.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thelostcity.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\themidnightlibrary.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thenorthman.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thestarling.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moviePosters\thevelvetunderground.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="View\UserControls\userIcon.png" />
