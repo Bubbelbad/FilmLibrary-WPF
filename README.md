@@ -6,6 +6,8 @@ This application should let the user browse movies for inspiration. The user sho
 First I thought I'd use API's to get the data, but since I need to practice MySQL and database connection I am changing the program to use that instead.
 It might be that I change my goals when I know more, but this is the idea!
 
+The architecture of this app wasn't planned from scratch and thus the structure is a little bit messy. I learned a lot about UserControls though, and look forward to doing another project with the knowedge I accumulated in this app as a start. 
+
 ## Features so far
 - Log In window and Sign up window that allows a user to log in (with a nice background blur effect on background)
 - When you log in, you get either admin privileges or ordinary user privilege to edit database
